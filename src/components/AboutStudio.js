@@ -50,7 +50,7 @@ export default function AboutStudio() {
       </div>
       
       <div className="flex-1 max-w-6xl">
-        <h2 className="text-7xl lg:text-[5rem] font-normal leading-none tracking-[-0.4rem] mb-16" ref={headingRef}>
+        <h2 className="text-7xl lg:text-[5rem] font-normal leading-none tracking-tight mb-16" ref={headingRef}>
           <div className="overflow-hidden pb-2 -mb-2"><span className="inline-block">ARCHITECTURE.</span></div>
           <div className="overflow-hidden pb-2 -mb-2"><span className="inline-block">INTERIORS.</span></div>
           <div className="overflow-hidden pb-2 -mb-2"><span className="inline-block">TURNKEY.</span></div>

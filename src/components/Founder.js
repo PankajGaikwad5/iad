@@ -56,7 +56,7 @@ export default function Founder() {
           <span className="uppercase">FOUNDER & PRINCIPAL ARCHITECT</span>
         </div>
         
-        <h2 className="text-7xl lg:text-[5rem] font-normal leading-none tracking-[-0.4rem] mb-12 text-black">
+        <h2 className="text-7xl lg:text-[5rem] font-normal leading-none tracking-tight mb-12 text-black">
           ISHAN<br/>AHLUWALIA
         </h2>
         

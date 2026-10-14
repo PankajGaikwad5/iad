@@ -5,19 +5,16 @@ import gsap from 'gsap';
 const slides = [
   {
     id: '01',
-    category: 'SELECTED WORK',
     title: 'THE MODERN VILLA',
     image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000'
   },
   {
     id: '02',
-    category: 'SELECTED WORK',
     title: 'HOUSE OF LIGHT',
     image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2000'
   },
   {
     id: '03',
-    category: 'SELECTED WORK',
     title: 'NATURE RETREAT',
     image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000'
   }
@@ -110,36 +107,21 @@ export default function Hero() {
         </div>
       ))}
       
-      <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16 pb-16 md:pb-24 text-white z-10" ref={textRef}>
+      <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16 pb-8 md:pb-10 text-white z-10" ref={textRef}>
         <div className="flex justify-between items-end w-full flex-col md:flex-row gap-8 md:gap-0">
           <div>
-            <p className="text-xs tracking-widest font-medium mb-6 uppercase">
-              {current.id} <span className="mx-2">/</span> {current.category}
+            <p className="text-xs tracking-widest font-medium mb-2 uppercase">
+              FEATURED PROJECTS
             </p>
-            <h1 className="text-7xl lg:text-[5rem] font-normal leading-none tracking-[-0.4rem] mb-8">
+            <h1 className="text-7xl lg:text-[5rem] font-normal leading-none tracking-tight">
               {current.title}
             </h1>
-            <a href="#project" className="text-xs tracking-widest font-medium border-b border-white pb-1.5 uppercase transition-opacity hover:opacity-50 inline-block">
-              VIEW PROJECT
-            </a>
           </div>
           
           <div className="flex items-center gap-8 md:gap-12">
-            <button onClick={handlePrev} className="text-xs tracking-widest font-medium hover:opacity-50 transition-opacity">PREV</button>
-            
-            <div className="flex gap-4">
-              {slides.map((s, idx) => (
-                <span 
-                  key={s.id} 
-                  className={`cursor-pointer text-sm font-medium transition-opacity ${currentSlide === idx + 1 ? 'opacity-100' : 'opacity-40 hover:opacity-70'}`}
-                  onClick={() => setSlide(idx + 1)}
-                >
-                  {s.id}
-                </span>
-              ))}
-            </div>
-            
-            <button onClick={handleNext} className="text-xs tracking-widest font-medium hover:opacity-50 transition-opacity">NEXT</button>
+            <a href="#project" className="text-xs tracking-widest font-medium border-b border-white pb-1.5 uppercase transition-opacity hover:opacity-50 inline-block">
+              VIEW PROJECT
+            </a>
           </div>
         </div>
       </div>
