@@ -7,6 +7,7 @@ import { motion, useReducedMotion } from 'motion/react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Marquee from '@/components/Marquee';
+import ServicesSection from '@/components/ServicesSection';
 
 if (typeof window !== 'undefined') gsap.registerPlugin(ScrollTrigger);
 
@@ -288,14 +289,13 @@ export default function Home() {
                     animate={{ scale: idx === activeSlide || reduceMotion ? 1 : 1.12 }}
                     transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}
                   />
+                  {/* Overlay strictly above image only */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-black/35 pointer-events-none" />
                   <div className="absolute inset-0 opacity-[0.22] mix-blend-overlay pointer-events-none" style={{ filter: 'url(#grain)' }} />
                 </div>
               ))}
             </motion.div>
           </div>
-
-          {/* Readability gradient (black only) */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-black/35 z-[1] pointer-events-none" />
 
           <div className="hero-slider-content absolute inset-0 z-20 pointer-events-none">
 
@@ -426,12 +426,17 @@ export default function Home() {
             <div data-fade className="sub text-[16px] text-[#222] font-[family-name:League_Spartan] mb-8 font-medium">Founder &amp; principal architect</div>
             <p data-fade className="max-w-[30em] mb-6 text-base md:text-lg tracking-wide text-[#222]/80 font-light font-[family-name:League_Spartan]">Ishan established Studio Ia.D in 2019, bringing architecture, interiors and landscape into one practice. He leads the design direction of the studio and works closely with clients and the team from concept to completion.</p>
             <p data-fade className="max-w-[30em] mb-6 text-base md:text-lg tracking-wide text-[#222]/80 font-light font-[family-name:League_Spartan]">His portfolio spans residences, retail spaces and hospitality, including The Modern Villa and Nature Retreat in Bhopal.</p>
+            <div data-fade className="pt-2">
+              <Button href="/team" className="font-[family-name:League_Spartan]">
+                Meet the Team
+              </Button>
+            </div>
           </div>
           <ImageWrapper id="fph" src={SRC.founder} label="Ishan Ahluwalia, founder of Studio Ia.D" className="!relative !inset-auto aspect-[4/5]" />
         </section>
 
         {/* ---------------- Studio ---------------- */}
-        <section id="why" className="px-6 sm:px-12 md:px-16 lg:px-24 pb-20 md:pb-28 relative">
+        {/* <section id="why" className="px-6 sm:px-12 md:px-16 lg:px-24 pb-20 md:pb-28 relative">
           <div className="wt flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 lg:gap-16 xl:gap-24 mb-12 md:mb-20">
             <div className="flex-1 min-w-0">
               <span data-fade className="lab block font-normal text-[12px] leading-[1.4] font-[family-name:League_Spartan] tracking-[0.18em] uppercase text-[#222]">The studio</span>
@@ -450,7 +455,10 @@ export default function Home() {
             </div>
           </div>
           <ImageWrapper id="wph" src={SRC.w} label="Interior of a Studio Ia.D project" className="!relative !inset-auto aspect-[16/7]" />
-        </section>
+        </section> */}
+
+        {/* ---------------- Services by Ia.D ---------------- */}
+        <ServicesSection />
 
         {/* Anchor target for "Projects". */}
         <div id="work" className="scroll-mt-24" />

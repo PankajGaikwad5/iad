@@ -8,12 +8,14 @@ import { useLenis } from 'lenis/react';
 const DEFAULT_PREVIEWS = [
   "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
   "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2000",
+  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000",
   "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000"
 ];
 
 const LINKS = [
   { title: 'Home', href: '/' },
   { title: 'Projects', href: '/projects' },
+  { title: 'Team', href: '/team' },
   { title: 'Awards & press', href: '/awards-and-press' }
 ];
 
@@ -265,6 +267,17 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
         } else {
           router.push('/' + href);
         }
+      } else if (href.startsWith('/#')) {
+        const hash = href.slice(1);
+        if (pathname === '/') {
+          const el = document.querySelector(hash);
+          if (el) {
+            if (lenis) lenis.scrollTo(el);
+            else el.scrollIntoView({ behavior: 'smooth' });
+          }
+        } else {
+          router.push(href);
+        }
       } else {
         if (pathname === href) {
           if (lenis) lenis.scrollTo(0);
@@ -343,13 +356,13 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
 
           {/* Right: est + menu */}
           <div className="flex items-center justify-end gap-8 md:gap-10">
-            <span
+            {/* <span
               className={`hidden font-[family-name:League_Spartan] text-[11px] font-normal uppercase tracking-[0.2em] md:block ${
                 isLight ? 'text-[#222]/70' : 'text-white/70'
               }`}
             >
               EST – 2019
-            </span>
+            </span> */}
             <button
               ref={openBtnRef}
               id="mb"

@@ -149,11 +149,12 @@ export default function ProjectsPage() {
             </div>
           </div>
 
-          {/* Project Showcase List / Masonry */}
-          <motion.div layout className="flex flex-col gap-16 md:gap-24">
+          {/* Project Showcase 2x2 Grid */}
+          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-x-8 sm:gap-x-10 lg:gap-x-12 xl:gap-x-14 gap-y-16 md:gap-y-20">
             <AnimatePresence mode="popLayout">
               {filteredProjects.map((project, idx) => {
-                const isEven = idx % 2 === 0;
+                const indexNum = String(idx + 1).padStart(2, '0');
+                const totalNum = String(filteredProjects.length).padStart(2, '0');
 
                 return (
                   <motion.article
@@ -161,72 +162,62 @@ export default function ProjectsPage() {
                     key={project.slug}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.97 }}
-                    transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                    className="group"
+                    exit={{ opacity: 0, scale: 0.96 }}
+                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                    className="group flex flex-col h-full"
                   >
                     <Link
                       href={`/projects/${project.slug}`}
-                      className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black"
+                      className="flex flex-col h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black"
                     >
-                      <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center ${
-                        isEven ? '' : 'lg:flex-row-reverse'
-                      }`}>
-                        {/* Image Showcase Container */}
-                        <div className={`lg:col-span-8 overflow-hidden bg-[#c9c9c9] relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[16/10] ${
-                          isEven ? 'lg:order-1' : 'lg:order-2'
-                        }`}>
-                          <motion.img
-                            src={project.heroImage}
-                            alt={project.title}
-                            className="w-full h-full object-cover contrast-105 transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
-                          />
-                          <div
-                            className="absolute inset-0 opacity-[0.22] mix-blend-overlay pointer-events-none"
-                            style={{ filter: 'url(#grain)' }}
-                          />
+                      {/* Image Showcase Container */}
+                      <div className="overflow-hidden bg-[#c9c9c9] relative aspect-[16/11] sm:aspect-[4/3] w-full border border-black/10">
+                        <motion.img
+                          src={project.heroImage}
+                          alt={project.title}
+                          className="w-full h-full object-cover contrast-105 transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+                        />
+                        <div
+                          className="absolute inset-0 opacity-[0.22] mix-blend-overlay pointer-events-none"
+                          style={{ filter: 'url(#grain)' }}
+                        />
 
-                          {/* Category Badge */}
-                          <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-md text-white px-3.5 py-1.5 text-[9px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase">
-                            {project.category}
-                          </div>
-
-                          {/* Index Overlay */}
-                          <div className="absolute bottom-4 right-4 text-white/90 font-[family-name:League_Spartan] text-[11px] tracking-[0.2em]">
-                            {String(idx + 1).padStart(2, '0')} / {String(filteredProjects.length).padStart(2, '0')}
-                          </div>
+                        {/* Category Badge */}
+                        <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white px-3 py-1.5 text-[9px] font-[family-name:League_Spartan] tracking-[0.22em] uppercase">
+                          {project.category}
                         </div>
 
-                        {/* Project Info Block */}
-                        <div className={`lg:col-span-4 flex flex-col justify-center ${
-                          isEven ? 'lg:order-2' : 'lg:order-1'
-                        }`}>
-                          <div className="flex items-center gap-3 text-[11px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-[#222]/60 mb-3">
+                        {/* Index Overlay */}
+                        <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-md text-[#111] px-2.5 py-1 text-[10px] font-[family-name:League_Spartan] tracking-widest uppercase border border-black/10">
+                          {indexNum} / {totalNum}
+                        </div>
+                      </div>
+
+                      {/* Project Info Block */}
+                      <div className="pt-6 flex flex-col flex-grow justify-between">
+                        <div>
+                          <div className="flex items-center justify-between text-[11px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-[#222]/55 mb-2.5">
                             <span>{project.loc}</span>
-                            <span>·</span>
                             <span>{project.year}</span>
                           </div>
 
-                          <h2 className="font-[family-name:Glacial_Indifference] text-4xl sm:text-5xl lg:text-6xl font-light uppercase leading-[0.95] tracking-[-0.03em] text-[#111] mb-5 group-hover:translate-x-2 transition-transform duration-500">
+                          <h2 className="font-[family-name:Glacial_Indifference] text-3xl sm:text-4xl lg:text-[2.6rem] font-light uppercase leading-[0.98] tracking-[-0.03em] text-[#111] mb-3 group-hover:translate-x-1.5 transition-transform duration-500">
                             {project.title}
                           </h2>
 
-                          <p className="font-[family-name:League_Spartan] text-sm md:text-base font-light text-[#222]/80 leading-relaxed mb-6">
+                          <p className="font-[family-name:League_Spartan] text-sm md:text-base font-light text-[#222]/75 leading-relaxed mb-6 line-clamp-2">
                             {project.tagline}
                           </p>
+                        </div>
 
-                          <div className="flex flex-wrap gap-y-2 gap-x-6 text-[11px] font-[family-name:League_Spartan] tracking-[0.18em] uppercase text-[#222]/70 pb-6 mb-6 border-b border-black/10">
-                            <div>
-                              <span className="block text-[9px] text-[#222]/40">Area</span>
-                              {project.area}
-                            </div>
-                            <div>
-                              <span className="block text-[9px] text-[#222]/40">Scope</span>
-                              {project.scope}
-                            </div>
+                        <div className="pt-4 border-t border-black/10 flex items-center justify-between gap-4 mt-auto">
+                          <div className="flex items-center gap-3 text-[10px] sm:text-[11px] font-[family-name:League_Spartan] tracking-[0.16em] uppercase text-[#222]/65 truncate">
+                            <span>{project.area}</span>
+                            <span className="text-black/25">·</span>
+                            <span className="truncate">{project.typology}</span>
                           </div>
 
-                          <div className="inline-flex items-center gap-3 text-[12px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-[#111] group-hover:text-black">
+                          <div className="inline-flex items-center gap-2 text-[11px] sm:text-[12px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-[#111] group-hover:text-black shrink-0">
                             <span className="relative pb-0.5 after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-full after:bg-black after:scale-x-0 group-hover:after:scale-x-100 after:origin-left after:transition-transform after:duration-500">
                               View Project
                             </span>

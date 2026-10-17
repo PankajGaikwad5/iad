@@ -54,6 +54,8 @@ export default function Footer() {
       <nav className="fn flex gap-8 md:gap-16 flex-wrap font-normal text-[13px] font-[family-name:League_Spartan] tracking-[0.18em] uppercase mb-16 md:mb-24" aria-label="Footer">
         <Link href="/" className={`cursor-pointer ${UNDERLINE}`}>Home</Link>
         <Link href="/projects" className={`cursor-pointer ${UNDERLINE}`}>Projects</Link>
+        <Link href="/team" className={`cursor-pointer ${UNDERLINE}`}>Team</Link>
+        <Link href="/#services" className={`cursor-pointer ${UNDERLINE}`}>Services</Link>
         <Link href="/awards-and-press" className={`cursor-pointer ${UNDERLINE}`}>Awards &amp; press</Link>
       </nav>
 
@@ -85,7 +87,7 @@ export default function Footer() {
             Madhya Pradesh 462016, India
           </p>
           <a
-            href="https://maps.google.com"
+            href="https://www.google.com/maps/place/Studio+Ia.D%7C+Ishan+Ahluwalia+Design/@23.2050576,77.4146129,751m/data=!3m2!1e3!4b1!4m6!3m5!1s0x397c43a88b3fc82d:0x20a6c45baafad8c2!8m2!3d23.2050527!4d77.4171878!16s%2Fg%2F11zg5t1y77?entry=ttu&g_ep=EgoyMDI2MTAxMi4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-block mb-2 text-[#222]/80 hover:text-[#222] transition-colors duration-500 ${UNDERLINE}`}
