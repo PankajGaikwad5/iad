@@ -7,24 +7,17 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { projects } from '@/data/projects';
 
-const EASE = 'ease-[cubic-bezier(0.22,1,0.36,1)]';
 
-// Text roll-up animation
-const Roll = ({ children }) => (
-  <span className="relative inline-block overflow-hidden py-[1px]">
-    <span className={`block transition-transform duration-500 ${EASE} group-hover:-translate-y-full group-focus-visible:-translate-y-full`}>
-      {children}
-    </span>
-    <span
-      aria-hidden="true"
-      className={`absolute inset-0 block translate-y-full py-[1px] transition-transform duration-500 ${EASE} group-hover:translate-y-0 group-focus-visible:translate-y-0`}
-    >
-      {children}
-    </span>
-  </span>
-);
 
-const CATEGORIES = ['All', 'Residential', 'Commercial', 'Hospitality'];
+const CATEGORIES = [
+  'All',
+  'Private Residences',
+  'Hospitality',
+  'Cafés & Restaurants',
+  'Workspaces & Retail',
+  'Residential Developments',
+  'Residential Interiors'
+];
 
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -91,61 +84,53 @@ export default function ProjectsPage() {
         <section className="px-6 sm:px-12 md:px-16 lg:px-24 py-16 md:py-24 max-w-[1400px] mx-auto">
           {/* Architectural Filter Bar */}
           <div className="mb-14 md:mb-20">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 border-b border-black/15 pb-px">
-              {/* Category Navigation Tabs */}
-              <div className="flex items-center gap-6 sm:gap-8 md:gap-10 overflow-x-auto no-scrollbar scroll-smooth">
-                {CATEGORIES.map((cat, idx) => {
-                  const isActive = activeFilter === cat;
-                  const count = categoryCounts[cat] || 0;
-                  const indexNumber = String(idx + 1).padStart(2, '0');
-
-                  return (
-                    <button
-                      key={cat}
-                      type="button"
-                      onClick={() => setActiveFilter(cat)}
-                      className={`group relative pb-3.5 sm:pb-4 cursor-pointer text-left transition-colors duration-300 font-[family-name:League_Spartan] text-[11px] sm:text-[12px] md:text-[13px] tracking-[0.22em] uppercase whitespace-nowrap focus-visible:outline-none ${
-                        isActive
-                          ? 'text-[#111] font-semibold'
-                          : 'text-[#222]/40 hover:text-[#111]'
-                      }`}
-                    >
-                      <span className="flex items-center gap-2">
-                        <span className={`text-[10px] tracking-widest font-mono transition-opacity duration-300 ${
-                          isActive ? 'text-[#111] opacity-70' : 'text-[#222]/30 group-hover:opacity-70'
-                        }`}>
-                          {indexNumber} /
-                        </span>
-                        <Roll>{cat}</Roll>
-                        <span className={`text-[10px] font-mono tracking-tight transition-all duration-300 ${
-                          isActive
-                            ? 'text-[#111] opacity-100 font-bold'
-                            : 'text-[#222]/40 group-hover:text-[#111] group-hover:opacity-80'
-                        }`}>
-                          [{String(count).padStart(2, '0')}]
-                        </span>
-                      </span>
-
-                      {/* Architectural Sliding Underline */}
-                      {isActive && (
-                        <motion.div
-                          layoutId="activeFilterUnderline"
-                          className="absolute -bottom-px left-0 right-0 h-[2px] bg-[#111]"
-                          transition={{ type: 'spring', stiffness: 450, damping: 35 }}
-                        />
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Counter / Scope Indicator */}
-              <div className="flex items-center gap-3 pb-3.5 sm:pb-4 text-[10px] sm:text-[11px] font-[family-name:League_Spartan] tracking-[0.22em] uppercase text-[#222]/50 whitespace-nowrap self-start sm:self-auto">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#111]/50" />
-                <span>
-                  Showing {filteredProjects.length} of {projects.length} Works
+            {/* Header: Label & Live Counter */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-black/15 mb-6">
+              <div className="flex items-center gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#111]" />
+                <span className="text-[11px] font-[family-name:League_Spartan] tracking-[0.25em] uppercase text-[#111] font-medium">
+                  Portfolio Typologies
                 </span>
               </div>
+              <div className="text-[11px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-[#222]/60 tabular-nums">
+                Showing <strong className="text-[#111] font-semibold">{filteredProjects.length}</strong> of {projects.length} Works
+              </div>
+            </div>
+
+            {/* Filter Pills: All options completely visible and wrap cleanly */}
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+              {CATEGORIES.map((cat, idx) => {
+                const isActive = activeFilter === cat;
+                const count = categoryCounts[cat] || 0;
+                const indexNumber = String(idx).padStart(2, '0');
+
+                return (
+                  <button
+                    key={cat}
+                    type="button"
+                    onClick={() => setActiveFilter(cat)}
+                    className={`group relative inline-flex items-center gap-2.5 px-4 py-2 sm:px-4.5 sm:py-2.5 rounded-full text-[11px] sm:text-[12px] font-[family-name:League_Spartan] tracking-[0.16em] uppercase transition-all duration-300 cursor-pointer border select-none focus-visible:outline focus-visible:outline-1 focus-visible:outline-black ${
+                      isActive
+                        ? 'bg-[#111] text-white border-[#111] shadow-sm'
+                        : 'bg-white/70 hover:bg-white text-[#222]/75 hover:text-[#111] border-black/15 hover:border-black/40'
+                    }`}
+                  >
+                    <span className={`text-[9px] font-mono tracking-wider transition-opacity ${
+                      isActive ? 'text-white/60' : 'text-[#222]/40 group-hover:text-[#222]/60'
+                    }`}>
+                      {indexNumber}
+                    </span>
+                    <span className="font-normal">{cat}</span>
+                    <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full tabular-nums transition-colors ${
+                      isActive
+                        ? 'bg-white/20 text-white font-semibold'
+                        : 'bg-black/[0.05] text-[#222]/60 group-hover:bg-black/10 group-hover:text-[#111]'
+                    }`}>
+                      {String(count).padStart(2, '0')}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
