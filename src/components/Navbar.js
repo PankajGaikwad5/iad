@@ -74,12 +74,16 @@ function useMagnetic(ref, strength = 0.25) {
 const motionScale = () =>
   typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0.001 : 1;
 
-export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = false }) {
+// `keepVisibleFor`: viewport heights of scroll during which the header never hides (e.g. a pinned hero)
+// `transparentFor`: viewport heights of scroll during which the header stays transparent (over a pinned hero);
+// past `lightTextFrom` viewport heights inside that zone it switches to white text and logo.
+export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = false, keepVisibleFor = 0, transparentFor = 0, lightTextFrom = null }) {
   const router = useRouter();
   const pathname = usePathname();
   const lenis = useLenis();
 
   const [scrolled, setScrolled] = useState(false);
+  const [heroZone, setHeroZone] = useState(null); // null | 'mat' | 'image'
   const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeImg, setActiveImg] = useState(0);
@@ -109,16 +113,21 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
       }
 
       setScrolled(y > 50);
+      const vh = window.innerHeight;
+      setHeroZone(
+        y < vh * transparentFor ? (lightTextFrom !== null && y > vh * lightTextFrom ? 'image' : 'mat') : null
+      );
       if (menuOpenRef.current) {
         lastY = y;
         return;
       }
 
       const delta = y - lastY;
-      if (y < 150) setHidden(false);
+      const safeZone = Math.max(150, window.innerHeight * keepVisibleFor);
+      if (y < safeZone) setHidden(false);
       else if (delta > 6) setHidden(true);
       else if (delta < -6) setHidden(false);
-      if (Math.abs(delta) > 6 || y < 150) lastY = y;
+      if (Math.abs(delta) > 6 || y < safeZone) lastY = y;
     };
 
     const onScroll = () => {
@@ -131,7 +140,7 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
     update();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [keepVisibleFor, transparentFor, lightTextFrom]);
 
   const lock = useCallback(() => {
     if (lenis) lenis.stop();
@@ -289,7 +298,9 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
     });
   };
 
-  const isLight = scrolled || darkText;
+  // Over a pinned hero the header stays transparent, and turns white while the photo is behind it
+  const solid = scrolled && !heroZone;
+  const isLight = (solid || darkText) && heroZone !== 'image';
 
   return (
     <>
@@ -306,7 +317,7 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
         className={`fixed inset-x-0 top-0 z-50 px-6 transition-[transform,background-color,padding,backdrop-filter,color] duration-500 ${EASE} sm:px-12 md:px-16 lg:px-24 ${
           hidden ? '-translate-y-full' : 'translate-y-0'
         } ${
-          scrolled
+          solid
             ? 'bg-[#f7f7f7]/90 py-3 backdrop-blur-xl md:py-4 text-[#222] border-b border-black/10'
             : isLight
             ? 'bg-transparent py-6 md:py-9 text-[#222]'
@@ -348,8 +359,9 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
             <img
               src="/logo.png"
               alt="Studio Ia.D"
-              className={`w-auto object-contain transition-[height] duration-500 ${EASE} ${
-                scrolled ? 'h-[20px] md:h-[26px]' : 'h-[24px] md:h-[32px]'
+              className={`w-auto object-contain transition-[height,filter] duration-500 ${EASE} ${
+                solid ? 'h-[20px] md:h-[26px]' : 'h-[24px] md:h-[32px]'
+              } ${heroZone === 'image' ? 'brightness-0 invert' : ''}
               }`}
             />
           </a>
@@ -396,7 +408,7 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
           ref={progressRef}
           aria-hidden="true"
           className={`absolute inset-x-0 bottom-0 h-px origin-left transition-opacity duration-500 [transform:scaleX(0)] ${
-            scrolled ? 'opacity-100 bg-[#222]/40' : 'opacity-0 bg-[#222]/40'
+            solid ? 'opacity-100 bg-[#222]/40' : 'opacity-0 bg-[#222]/40'
           }`}
         />
       </header>

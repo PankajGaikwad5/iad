@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useLenis } from 'lenis/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,7 +13,19 @@ const UNDERLINE =
 
 export default function Footer() {
   const lenis = useLenis();
+  const pathname = usePathname();
   const footerRef = useRef(null);
+
+  const handleStudioClick = (e) => {
+    if (pathname === '/') {
+      e.preventDefault();
+      if (lenis) {
+        lenis.scrollTo(0, { duration: 1.4 });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  };
 
   const scrollToTop = (e) => {
     e.preventDefault();
@@ -60,10 +73,11 @@ export default function Footer() {
       </nav>
 
       {/* Monumental Wordmark */}
-      <div
-        role="img"
+      <Link
+        href="/"
+        onClick={handleStudioClick}
         aria-label="Studio Ia.D"
-        className="big flex items-baseline justify-between w-full max-w-full font-light text-[clamp(2.2rem,6.8vw,8rem)] leading-none font-[family-name:Glacial_Indifference] tracking-normal uppercase select-none pb-2 pt-2"
+        className="big flex items-baseline justify-between w-full max-w-full font-light text-[clamp(2.2rem,6.8vw,8rem)] leading-none font-[family-name:Glacial_Indifference] tracking-normal uppercase select-none pb-2 pt-2 cursor-pointer no-underline text-[#222] transition-opacity duration-300 hover:opacity-75 focus-visible:outline focus-visible:outline-1 focus-visible:outline-black"
       >
         <div className="flex justify-between w-[57%] overflow-hidden py-1">
           {['S', 'T', 'U', 'D', 'I', 'O'].map((char, i) => (
@@ -75,7 +89,7 @@ export default function Footer() {
             <span key={i} aria-hidden="true" className="inline-block transform-gpu will-change-transform">{char}</span>
           ))}
         </div>
-      </div>
+      </Link>
 
       {/* Info Columns */}
       <div className="cols grid grid-cols-1 md:grid-cols-[1.4fr_1fr_1fr] gap-10 py-16 md:py-24 font-[family-name:League_Spartan]">
@@ -119,7 +133,16 @@ export default function Footer() {
 
       {/* Base Bar */}
       <div className="base flex flex-wrap items-center justify-between gap-y-3 text-[13px] text-[#222]/80 font-[family-name:League_Spartan] tracking-wide border-t border-black/10 pt-6">
-        <span>© 2026 Studio Ia.D</span>
+        <span>
+          © 2026{' '}
+          <Link
+            href="/"
+            onClick={handleStudioClick}
+            className={`cursor-pointer text-inherit no-underline ${UNDERLINE}`}
+          >
+            Studio Ia.D
+          </Link>
+        </span>
         <button
           onClick={scrollToTop}
           className={`cursor-pointer text-[#222]/80 hover:text-[#222] transition-colors duration-500 bg-transparent border-none p-0 ${UNDERLINE}`}

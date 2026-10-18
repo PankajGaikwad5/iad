@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Marquee from '@/components/Marquee';
 import ServicesSection from '@/components/ServicesSection';
+import HeroFrameLight from '@/components/revamp/heroes/HeroFrameLight';
 
 if (typeof window !== 'undefined') gsap.registerPlugin(ScrollTrigger);
 
@@ -27,6 +28,9 @@ const SLIDES = [
 
 const SLIDE_MS = 1200;
 const AUTOPLAY_MS = 5000;
+
+// Trying the framed B&W hero (4E+ from /alt-revamp/heroes); false brings back the original slider
+const USE_FRAME_HERO = true;
 const SLIDE_EASE = [0.76, 0, 0.24, 1];
 const EASE = 'ease-[cubic-bezier(0.22,1,0.36,1)]';
 const pad = (n) => String(n).padStart(2, '0');
@@ -121,7 +125,7 @@ export default function Home() {
 
   // Autoplay restarts after every change (manual or automatic); off for reduced motion
   useEffect(() => {
-    if (reduceMotion) return;
+    if (reduceMotion || USE_FRAME_HERO) return;
     const id = setTimeout(() => paginate(1), SLIDE_MS + AUTOPLAY_MS);
     return () => clearTimeout(id);
   }, [activeSlide, reduceMotion, paginate]);
@@ -264,10 +268,16 @@ export default function Home() {
 
       <svg width="0" height="0" className="absolute" aria-hidden="true"><filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="5" /><feColorMatrix type="saturate" values="0" /></filter></svg>
 
-      <Navbar />
+      <Navbar
+        darkText={USE_FRAME_HERO}
+        keepVisibleFor={USE_FRAME_HERO ? 2.2 : 0}
+        transparentFor={USE_FRAME_HERO ? 2.5 : 0}
+        lightTextFrom={USE_FRAME_HERO ? 0.3 : null}
+      />
 
       <main id="top">
         {/* ---------------- Hero ---------------- */}
+        {USE_FRAME_HERO ? <HeroFrameLight /> : (
         <section className="hero relative h-[100svh] min-h-[620px] overflow-hidden bg-[#111] select-none" aria-roledescription="carousel" aria-label="Featured projects">
 
           {/* Filmstrip */}
@@ -411,6 +421,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        )}
 
         {/* ---------------- Media & Press Marquee ---------------- */}
         <Marquee />
@@ -420,7 +431,7 @@ export default function Home() {
           <div>
             <span data-fade className="lab block font-normal text-[12px] leading-[1.4] font-[family-name:League_Spartan] tracking-[0.18em] uppercase text-[#222]">Studio Ia.D</span>
             <Lines
-              lines={['Ishan', 'Ahluwalia']}
+              lines={['Ar.','Ishan', 'Ahluwalia']}
               className="d font-light text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-[-0.035em] uppercase font-[family-name:Glacial_Indifference] mt-6 mb-8"
             />
             <div data-fade className="sub text-[16px] text-[#222] font-[family-name:League_Spartan] mb-8 font-medium">Founder &amp; principal architect</div>
