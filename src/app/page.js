@@ -268,12 +268,7 @@ export default function Home() {
 
       <svg width="0" height="0" className="absolute" aria-hidden="true"><filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="5" /><feColorMatrix type="saturate" values="0" /></filter></svg>
 
-      <Navbar
-        darkText={USE_FRAME_HERO}
-        keepVisibleFor={USE_FRAME_HERO ? 2.2 : 0}
-        transparentFor={USE_FRAME_HERO ? 2.5 : 0}
-        lightTextFrom={USE_FRAME_HERO ? 0.3 : null}
-      />
+      <Navbar />
 
       <main id="top">
         {/* ---------------- Hero ---------------- */}

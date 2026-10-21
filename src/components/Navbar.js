@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import gsap from 'gsap';
 import { useLenis } from 'lenis/react';
+import { teamPhotos } from '@/data/team';
 
 const DEFAULT_PREVIEWS = [
   "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
@@ -15,7 +16,7 @@ const DEFAULT_PREVIEWS = [
 const LINKS = [
   { title: 'Home', href: '/' },
   { title: 'Projects', href: '/projects' },
-  { title: 'Team', href: '/team' },
+  { title: 'Team', href: '/team', team: true },
   { title: 'Awards & press', href: '/awards-and-press' }
 ];
 
@@ -87,6 +88,19 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
   const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeImg, setActiveImg] = useState(0);
+  const [teamPick, setTeamPick] = useState(0);
+
+  // Team link shows a random member, never the same one twice in a row
+  const showLink = (i) => {
+    if (!LINKS[i].team) return setActiveImg(i);
+    if (activeImg !== 'team') {
+      setTeamPick((prev) => {
+        const next = Math.floor(Math.random() * (teamPhotos.length - 1));
+        return next >= prev ? next + 1 : next;
+      });
+    }
+    setActiveImg('team');
+  };
 
   const menuRef = useRef(null);
   const progressRef = useRef(null);
@@ -359,9 +373,8 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
             <img
               src="/logo.png"
               alt="Studio Ia.D"
-              className={`w-auto object-contain transition-[height,filter] duration-500 ${EASE} ${
-                solid ? 'h-[20px] md:h-[26px]' : 'h-[24px] md:h-[32px]'
-              } ${heroZone === 'image' ? 'brightness-0 invert' : ''}
+              className={`w-auto object-contain transition-[height] duration-500 ${EASE} ${
+                scrolled ? 'h-[20px] md:h-[26px]' : 'h-[24px] md:h-[32px]'
               }`}
             />
           </a>
@@ -467,8 +480,8 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
               <a
                 href={item.href}
                 onClick={(e) => handleLinkClick(e, item.href)}
-                onMouseEnter={() => setActiveImg(i)}
-                onFocus={() => setActiveImg(i)}
+                onMouseEnter={() => showLink(i)}
+                onFocus={() => showLink(i)}
                 className={`group/link inline-block cursor-pointer transition-transform duration-500 ${EASE} hover:translate-x-3 focus-visible:translate-x-3 focus-visible:outline-none`}
               >
                 <span
@@ -496,16 +509,18 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
           data-preview
           className="relative hidden aspect-[3/4] w-[min(28vw,400px)] self-center justify-self-end md:block"
         >
-          {previewImages.map((src, i) => (
+          {[...previewImages, ...teamPhotos.map((m) => m.image)].map((src, i) => {
+            const on = activeImg === 'team' ? i === previewImages.length + teamPick : activeImg === i;
+            return (
             <div
               key={i}
               className={`absolute inset-0 overflow-hidden bg-[#c9c9c9] transition-opacity duration-700 ${
-                activeImg === i ? 'opacity-100' : 'opacity-0'
+                on ? 'opacity-100' : 'opacity-0'
               }`}
             >
               <div
                 className={`absolute inset-[-8%] bg-cover bg-center contrast-105 transition-transform duration-[1400ms] ${EASE} ${
-                  activeImg === i ? 'scale-100' : 'scale-110'
+                  on ? 'scale-100' : 'scale-110'
                 }`}
                 style={{ backgroundImage: `url(${src})` }}
               />
@@ -514,9 +529,12 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
                 style={{ filter: 'url(#nav-grain)' }}
               />
             </div>
-          ))}
-          <span className="pointer-events-none absolute bottom-3 left-4 font-[family-name:League_Spartan] text-[10px] tracking-[0.2em] text-white/90">
-            {String(activeImg + 1).padStart(2, '0')} / {String(previewImages.length).padStart(2, '0')}
+            );
+          })}
+          <span className="pointer-events-none absolute bottom-3 left-4 font-[family-name:League_Spartan] text-[10px] uppercase tracking-[0.2em] text-white/90">
+            {activeImg === 'team'
+              ? teamPhotos[teamPick].name
+              : `${String(activeImg + 1).padStart(2, '0')} / ${String(previewImages.length).padStart(2, '0')}`}
           </span>
         </div>
 

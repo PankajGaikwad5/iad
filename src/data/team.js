@@ -130,3 +130,24 @@ export const studioPillars = [
     desc: "Daily collaboration between our architects and master artisans ensures every shadow groove, reveal, and joinery detail matches the initial intent."
   }
 ];
+
+const photo = (file) => encodeURI(`/team/${file}.jpeg`);
+
+export const founder = {
+  id: "ishan-ahluwalia",
+  name: "Ar. Ishan Ahluwalia",
+  role: "Founder / Principal Architect",
+  image: photo("Ar. Ishan Ahluwalia"),
+  bio: "Ishan established Studio Ia.D in 2019, bringing architecture, interiors and landscape into one practice. He leads the design direction of the studio and works closely with clients and the team from concept to completion."
+};
+
+export const studioTeam = [
+  { id: "rajbir-singh-ahluwalia", name: "Rajbir Singh Ahluwalia", role: "MD / Senior Advisor", image: photo("Rajbir Singh Ahluwalia") },
+  { id: "shivraj-singh-rajput", name: "Shivraj Singh Rajput", role: "Business Head", image: photo("Shivraj Singh Rajput") },
+  { id: "ekkta-ahluwalia", name: "Ekkta Ahluwalia", role: "Brand & Media Lead", image: photo("Ekkta Ahluwalia") },
+  { id: "vaishnavi-bhardwaj", name: "Vaishnavi Bhardwaj", role: "3D Expert / Project Designer", image: photo("Vaishnavi Bhardwaj") },
+  // TODO: confirm Mohit's role
+  { id: "mohit-rai", name: "Mohit Rai", role: "2D Expert / Project Designer", image: photo("Mohit Rai ") }
+];
+
+export const teamPhotos = [founder, ...studioTeam].map((m) => ({ name: m.name, image: m.image }));

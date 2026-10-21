@@ -27,7 +27,7 @@ const OPTIONS = [
   { id: 'opt-4d', label: '4D', name: '4D — B&W, filmstrip thumbnails', Hero: HeroMonoFilmstrip },
   { id: 'opt-4e', label: '4E', name: '4E — B&W, framed print', Hero: HeroMonoFrame },
   { id: 'opt-4er', label: '4E+', name: '4E Refined — photo first', Hero: () => <HeroMonoFrame refined /> },
-  { id: 'opt-4el', label: '4E Light', name: '4E Light — on the site’s light mat', Hero: HeroFrameLight },
+  { id: 'opt-4el', label: '4E Light', name: '4E Light — on the site’s light mat', Hero: () => <HeroFrameLight pinnedFrame /> },
   { id: 'opt-4f', label: '4F', name: '4F — Shutter / aperture', Hero: HeroMonoAperture },
   { id: 'opt-4g', label: '4G', name: '4G — Diptych, next print waiting', Hero: HeroMonoDiptych },
   { id: 'opt-4h', label: '4H', name: '4H — Drawing sheet', Hero: HeroMonoDrawing },
