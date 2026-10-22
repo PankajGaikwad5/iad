@@ -200,7 +200,7 @@ export default function HeroFrameLight({ pinnedFrame = false }) {
 
   // DEFAULT: Full-bleed hero that visitors see right away, fitting the full window size without cutting key architectural features
   return (
-    <section ref={sectionRef} className="relative h-screen w-full overflow-hidden bg-[#111] text-white select-none">
+    <section ref={sectionRef} className="relative h-[100svh] min-h-[480px] w-full overflow-hidden bg-[#111] text-white select-none">
       <HeroStyles />
 
       {/* Full-window image container */}
@@ -234,7 +234,7 @@ export default function HeroFrameLight({ pinnedFrame = false }) {
 
       {/* Atmospheric overlays for contrast and readability */}
       <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-32 bg-gradient-to-b from-black/60 via-black/20 to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-48 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-64 md:h-48 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
 
       {/* Scroll-driven subtle darkening scrim */}
       <div ref={scrollOverlayRef} className="pointer-events-none absolute inset-0 z-[3] bg-black opacity-0" />
@@ -260,9 +260,9 @@ export default function HeroFrameLight({ pinnedFrame = false }) {
           ))}
         </div>
 
-        <div className="pointer-events-auto absolute inset-x-6 bottom-6 z-20 flex items-end justify-between gap-6 sm:inset-x-12 md:inset-x-16 md:bottom-8 lg:inset-x-24">
-          <div className="flex flex-col items-start">
-            <h1 key={index} className="overflow-hidden font-[family-name:Glacial_Indifference] text-4xl font-light uppercase leading-[0.9] tracking-[-0.035em] md:text-6xl xl:text-7xl">
+        <div className="pointer-events-auto absolute inset-x-6 bottom-[max(1.5rem,env(safe-area-inset-bottom))] z-20 flex items-end justify-between gap-4 sm:inset-x-12 sm:gap-6 md:inset-x-16 md:bottom-8 lg:inset-x-24">
+          <div className="flex min-w-0 flex-col items-start">
+            <h1 key={index} className="overflow-hidden break-words font-[family-name:Glacial_Indifference] text-[1.75rem] font-light uppercase leading-[0.9] tracking-[-0.035em] min-[400px]:text-4xl md:text-6xl xl:text-7xl">
               <span className="hx-rise" style={{ animationDelay: '200ms' }}>{slide.title}</span>
             </h1>
             <div className="mt-3 md:mt-4">

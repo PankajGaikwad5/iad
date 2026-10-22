@@ -115,6 +115,24 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
     };
   }, [isLightboxOpen, allImages.length]);
 
+  // Keep the active thumbnail in view when the strip overflows (phones)
+  useEffect(() => {
+    if (!isLightboxOpen) return;
+    thumbRefs.current[activeImageIndex]?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  }, [isLightboxOpen, activeImageIndex]);
+
+  // Horizontal swipe on touch screens
+  const touchX = useRef(null);
+  const onTouchStart = (e) => { touchX.current = e.touches[0].clientX; };
+  const onTouchEnd = (e) => {
+    if (touchX.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchX.current;
+    touchX.current = null;
+    if (Math.abs(dx) < 50) return;
+    if (dx < 0) nextImage();
+    else prevImage();
+  };
+
   return (
     <div className="bg-[#f7f7f7] text-[#222] font-sans antialiased overflow-x-clip selection:bg-black selection:text-white min-h-screen">
       {/* SVG Grain Filter */}
@@ -132,16 +150,16 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
         <section className="relative pt-36 md:pt-44 pb-12 md:pb-16 px-6 sm:px-12 md:px-16 lg:px-24 bg-[#f7f7f7] text-[#222] border-b border-black/10">
           <div className="max-w-[1400px] mx-auto">
             {/* Top Back & Category Bar */}
-            <div className="flex items-center justify-between gap-4 mb-10 pb-6 border-b border-black/10">
+            <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-3 mb-10 pb-6 border-b border-black/10">
               <Link
                 href="/projects"
-                className="group inline-flex items-center gap-2 text-[11px] md:text-[12px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-[#222]/70 hover:text-[#111] transition-colors"
+                className="group inline-flex shrink-0 items-center gap-2 text-[11px] md:text-[12px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-[#222]/70 hover:text-[#111] transition-colors"
               >
                 <span className="transition-transform duration-300 group-hover:-translate-x-1">←</span>
                 <span>All Projects</span>
               </Link>
-              <div className="flex items-center gap-3 text-[10px] md:text-[11px] font-[family-name:League_Spartan] tracking-[0.25em] uppercase text-[#222]/60">
-                <span>{project.category}</span>
+              <div className="flex min-w-0 items-center gap-3 text-[10px] md:text-[11px] font-[family-name:League_Spartan] tracking-[0.2em] md:tracking-[0.25em] uppercase text-[#222]/60">
+                <span className="truncate">{project.category}</span>
                 <span>·</span>
                 <span>{project.loc}</span>
               </div>
@@ -149,7 +167,7 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
 
             {/* Monumental Headline */}
             <div className="mb-12">
-              <h1 className="font-[family-name:Glacial_Indifference] text-5xl sm:text-7xl md:text-8xl lg:text-[7.5rem] xl:text-[9rem] font-light uppercase leading-[0.88] tracking-[-0.035em] text-[#111]">
+              <h1 className="break-words font-[family-name:Glacial_Indifference] text-[2.5rem] min-[400px]:text-5xl sm:text-7xl lg:text-8xl xl:text-[7.5rem] 2xl:text-[9rem] font-light uppercase leading-[0.88] tracking-[-0.035em] text-[#111]">
                 {project.title}
               </h1>
               <p className="mt-6 max-w-[700px] font-[family-name:League_Spartan] text-base md:text-lg text-[#222]/80 font-light leading-relaxed">
@@ -193,35 +211,35 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
               </div>
 
               <div className="flex flex-col border-t border-black/15 font-[family-name:League_Spartan]">
-                <div className="flex justify-between items-baseline py-4 border-b border-black/10">
+                <div className="flex justify-between items-baseline gap-6 py-4 border-b border-black/10">
                   <span className="text-[10px] tracking-[0.2em] font-medium uppercase text-[#222]/50">Project</span>
                   <span className="text-[12px] tracking-[0.1em] uppercase font-light text-right">{project.projectName}</span>
                 </div>
-                <div className="flex justify-between items-baseline py-4 border-b border-black/10">
+                <div className="flex justify-between items-baseline gap-6 py-4 border-b border-black/10">
                   <span className="text-[10px] tracking-[0.2em] font-medium uppercase text-[#222]/50">Location</span>
                   <span className="text-[12px] tracking-[0.1em] uppercase font-light text-right">{project.loc}</span>
                 </div>
-                <div className="flex justify-between items-baseline py-4 border-b border-black/10">
+                <div className="flex justify-between items-baseline gap-6 py-4 border-b border-black/10">
                   <span className="text-[10px] tracking-[0.2em] font-medium uppercase text-[#222]/50">Typology</span>
                   <span className="text-[12px] tracking-[0.1em] uppercase font-light text-right">{project.typology || project.category}</span>
                 </div>
-                <div className="flex justify-between items-baseline py-4 border-b border-black/10">
+                <div className="flex justify-between items-baseline gap-6 py-4 border-b border-black/10">
                   <span className="text-[10px] tracking-[0.2em] font-medium uppercase text-[#222]/50">Scope</span>
                   <span className="text-[12px] tracking-[0.1em] uppercase font-light text-right">{project.scope}</span>
                 </div>
-                <div className="flex justify-between items-baseline py-4 border-b border-black/10">
+                <div className="flex justify-between items-baseline gap-6 py-4 border-b border-black/10">
                   <span className="text-[10px] tracking-[0.2em] font-medium uppercase text-[#222]/50">Built Area</span>
                   <span className="text-[12px] tracking-[0.1em] uppercase font-light text-right">{project.area}</span>
                 </div>
-                <div className="flex justify-between items-baseline py-4 border-b border-black/10">
+                <div className="flex justify-between items-baseline gap-6 py-4 border-b border-black/10">
                   <span className="text-[10px] tracking-[0.2em] font-medium uppercase text-[#222]/50">Year</span>
                   <span className="text-[12px] tracking-[0.1em] uppercase font-light text-right">{project.year}</span>
                 </div>
-                <div className="flex justify-between items-baseline py-4 border-b border-black/10">
+                <div className="flex justify-between items-baseline gap-6 py-4 border-b border-black/10">
                   <span className="text-[10px] tracking-[0.2em] font-medium uppercase text-[#222]/50">Principal</span>
                   <span className="text-[12px] tracking-[0.1em] uppercase font-light text-right">{project.details?.principal || 'Ishan Ahluwalia'}</span>
                 </div>
-                <div className="flex justify-between items-baseline py-4 border-b border-black/10">
+                <div className="flex justify-between items-baseline gap-6 py-4 border-b border-black/10">
                   <span className="text-[10px] tracking-[0.2em] font-medium uppercase text-[#222]/50">Execution</span>
                   <span className="text-[12px] tracking-[0.1em] uppercase font-light text-right">Studio Ia.D Turnkey</span>
                 </div>
@@ -239,7 +257,7 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
                 </h3>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 text-justify font-[family-name:League_Spartan] text-[#222]/85 text-base md:text-[17px] font-light leading-relaxed">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 md:text-justify font-[family-name:League_Spartan] text-[#222]/85 text-base md:text-[17px] font-light leading-relaxed">
                 <div className="flex flex-col gap-6">
                   {project.description.slice(0, Math.ceil(project.description.length / 2)).map((p, i) => (
                     <p key={i}>{p}</p>
@@ -257,7 +275,7 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
 
         {/* ---------------- Project Gallery / Mosaic ---------------- */}
         <section className="px-6 sm:px-12 md:px-16 lg:px-24 pb-20 md:pb-28 max-w-[1400px] mx-auto border-t border-black/10 pt-16">
-          <div className="flex items-end justify-between mb-12">
+          <div className="flex items-end justify-between gap-6 mb-10 md:mb-12">
             <div>
               <span className="block text-[11px] font-[family-name:League_Spartan] tracking-[0.25em] uppercase text-[#222]/50 mb-2">
                 Visual Archive
@@ -283,20 +301,20 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
             </div>
 
             {/* Tablet Layout (3 columns, aligned at top and bottom) */}
-            <div className="hidden sm:grid md:hidden grid-cols-3 gap-6 items-stretch">
-              <div className="flex flex-col gap-6 h-full">
+            <div className="hidden sm:grid lg:hidden grid-cols-3 gap-5 items-stretch">
+              <div className="flex flex-col gap-5 h-full">
                 {cols3[0].map(renderCard)}
               </div>
-              <div className="flex flex-col gap-6 h-full">
+              <div className="flex flex-col gap-5 h-full">
                 {cols3[1].map(renderCard)}
               </div>
-              <div className="flex flex-col gap-6 h-full">
+              <div className="flex flex-col gap-5 h-full">
                 {cols3[2].map(renderCard)}
               </div>
             </div>
 
             {/* Desktop Layout (4 columns, aligned at top and bottom) */}
-            <div className="hidden md:grid grid-cols-4 gap-6 items-stretch">
+            <div className="hidden lg:grid grid-cols-4 gap-6 items-stretch">
               <div className="flex flex-col gap-6 h-full">
                 {cols4[0].map(renderCard)}
               </div>
@@ -333,22 +351,22 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
                 href={`/projects/${nextProject.slug}`}
                 className="group block focus-visible:outline-none"
               >
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-                  <div>
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+                  <div className="min-w-0">
                     <span className="block text-[11px] font-[family-name:League_Spartan] tracking-[0.25em] uppercase text-[#222]/50 mb-4">
                       Next Commission →
                     </span>
-                    <h3 className="font-[family-name:Glacial_Indifference] text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-light uppercase leading-[0.9] tracking-[-0.035em] text-[#111] group-hover:translate-x-3 transition-transform duration-500">
+                    <h3 className="break-words font-[family-name:Glacial_Indifference] text-[2.5rem] min-[400px]:text-5xl sm:text-7xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-light uppercase leading-[0.9] tracking-[-0.035em] text-[#111] group-hover:translate-x-3 transition-transform duration-500">
                       {nextProject.title}
                     </h3>
-                    <div className="flex items-center gap-3 mt-4 text-[11px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-[#222]/60">
+                    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-4 text-[11px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-[#222]/60">
                       <span>{nextProject.category}</span>
                       <span>·</span>
                       <span>{nextProject.loc}</span>
                     </div>
                   </div>
 
-                  <div className="w-full md:w-[320px] lg:w-[420px] aspect-[16/10] overflow-hidden bg-[#c9c9c9] border border-black/10 shrink-0">
+                  <div className="w-full sm:max-w-[560px] lg:w-[420px] aspect-[16/10] overflow-hidden bg-[#c9c9c9] border border-black/10 shrink-0">
                     <img
                       src={nextProject.heroImage}
                       alt={nextProject.title}
@@ -373,28 +391,32 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
             className="fixed inset-0 z-[100] bg-black/95 flex flex-col justify-between p-4 md:p-8 select-none"
           >
             {/* Top Bar */}
-            <div className="flex items-center justify-between w-full text-white">
-              <span className="text-[11px] md:text-xs font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-white/80">
+            <div className="flex items-center justify-between gap-4 w-full text-white pt-[env(safe-area-inset-top)]">
+              <span className="min-w-0 truncate text-[11px] md:text-xs font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-white/80">
                 {project.title} <span className="text-white/40">— {activeImageIndex + 1} / {allImages.length}</span>
               </span>
               <button
                 onClick={() => setIsLightboxOpen(false)}
-                className="group cursor-pointer flex items-center gap-2 text-[11px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-white hover:text-white/70 transition-colors"
+                className="group -m-2 p-2 shrink-0 cursor-pointer flex items-center gap-2 text-[11px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-white hover:text-white/70 transition-colors"
                 aria-label="Close fullscreen view"
               >
-                <span>Close [ESC]</span>
+                <span>Close<span className="hidden md:inline"> [ESC]</span></span>
                 <span className="text-xl leading-none">✕</span>
               </button>
             </div>
 
             {/* Centered Image Display */}
-            <div className="relative flex-1 flex items-center justify-center w-full h-full my-4 overflow-hidden">
+            <div
+              onTouchStart={onTouchStart}
+              onTouchEnd={onTouchEnd}
+              className="relative flex-1 min-h-0 flex items-center justify-center w-full my-4 overflow-hidden"
+            >
               <AnimatePresence mode="wait">
                 <motion.img
                   key={activeImageIndex}
                   src={allImages[activeImageIndex]}
                   alt={`${project.title} - View ${activeImageIndex + 1}`}
-                  className="max-w-full max-h-[82vh] object-contain pointer-events-none"
+                  className="max-w-full max-h-full object-contain pointer-events-none"
                   initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
@@ -405,14 +427,14 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
               {/* Navigation Arrows */}
               <button
                 onClick={prevImage}
-                className="cursor-pointer absolute left-2 md:left-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white hover:text-black text-white flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
+                className="cursor-pointer absolute left-0 sm:left-2 md:left-6 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-white hover:text-black text-white flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
                 aria-label="Previous image"
               >
                 <span className="text-lg">←</span>
               </button>
               <button
                 onClick={nextImage}
-                className="cursor-pointer absolute right-2 md:right-6 w-12 h-12 rounded-full bg-white/10 hover:bg-white hover:text-black text-white flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
+                className="cursor-pointer absolute right-0 sm:right-2 md:right-6 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-white hover:text-black text-white flex items-center justify-center transition-all duration-300 backdrop-blur-sm"
                 aria-label="Next image"
               >
                 <span className="text-lg">→</span>
@@ -420,11 +442,13 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
             </div>
 
             {/* Thumbnail Bottom Strip */}
-            <div className="w-full max-w-[800px] mx-auto overflow-hidden">
-              <div className="flex gap-2 justify-center overflow-x-auto py-2 no-scrollbar">
+            <div className="w-full max-w-[800px] mx-auto overflow-hidden pb-[env(safe-area-inset-bottom)]">
+              {/* w-max + mx-auto centres a short strip; max-w-full lets a long one scroll from its first thumb */}
+              <div data-lenis-prevent className="flex gap-2 w-max max-w-full mx-auto overflow-x-auto px-1 py-2 no-scrollbar">
                 {allImages.map((src, i) => (
                   <button
                     key={i}
+                    ref={(el) => (thumbRefs.current[i] = el)}
                     onClick={() => setActiveImageIndex(i)}
                     className={`cursor-pointer relative w-16 h-12 md:w-20 md:h-14 shrink-0 overflow-hidden border transition-all duration-300 ${
                       i === activeImageIndex

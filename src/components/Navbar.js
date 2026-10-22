@@ -434,7 +434,8 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
         aria-modal="true"
         aria-label="Menu"
         onKeyDown={trapFocus}
-        className="invisible fixed inset-0 z-50 flex flex-col bg-[#f7f7f7] px-6 pb-[max(32px,env(safe-area-inset-bottom))] pt-[max(32px,env(safe-area-inset-top))] sm:px-12 md:grid md:grid-cols-[1.2fr_1fr] md:grid-rows-[auto_1fr_auto] md:px-16 md:pb-10 md:pt-10 lg:px-24"
+        data-lenis-prevent
+        className="invisible fixed inset-0 z-50 flex flex-col overflow-y-auto overscroll-contain bg-[#f7f7f7] px-6 pb-[max(32px,env(safe-area-inset-bottom))] pt-[max(32px,env(safe-area-inset-top))] sm:px-12 md:grid md:grid-cols-[1.2fr_1fr] md:grid-rows-[auto_1fr_auto] md:px-16 md:pb-10 md:pt-10 lg:px-24"
         style={{ clipPath: 'inset(0 0 100% 0)' }}
       >
         {/* Top bar */}
@@ -486,7 +487,7 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
               >
                 <span
                   data-line
-                  className="flex items-baseline gap-4 font-[family-name:Glacial_Indifference] text-4xl font-light uppercase leading-[1.05] tracking-[-0.035em] text-[#111] sm:text-6xl md:gap-6 md:text-7xl lg:text-[4.75rem] xl:text-[5.25rem]"
+                  className="flex items-baseline gap-4 font-[family-name:Glacial_Indifference] text-4xl font-light uppercase leading-[1.05] tracking-[-0.035em] text-[#111] sm:text-6xl md:gap-6 lg:text-[4.75rem] xl:text-[5.25rem] [@media(max-height:500px)]:text-4xl"
                 >
                   <sup className="font-[family-name:League_Spartan] text-[13px] font-light tracking-normal text-[#111]/50 md:text-[15px]">
                     ({i + 1})

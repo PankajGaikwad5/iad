@@ -41,12 +41,12 @@ export default function AwardsAndPressPage() {
         {/* ---------------- Hero Section ---------------- */}
         <section className="relative pt-36 md:pt-48 pb-16 md:pb-24 px-6 sm:px-12 md:px-16 lg:px-24 border-b border-black/10 bg-[#f7f7f7] text-[#222]">
           <div className="max-w-[1400px] mx-auto">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-8">
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-8">
               <div>
                 <span className="block font-normal text-[11px] md:text-[12px] font-[family-name:League_Spartan] tracking-[0.25em] uppercase text-[#222]/60 mb-4">
                   Recognition &amp; Publications
                 </span>
-                <h1 className="font-light text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-[-0.035em] uppercase font-[family-name:Glacial_Indifference] text-[#111]">
+                <h1 className="font-light text-5xl sm:text-7xl md:text-8xl xl:text-9xl leading-[0.9] tracking-[-0.035em] uppercase font-[family-name:Glacial_Indifference] text-[#111]">
                   Awards &amp; Press
                 </h1>
               </div>
@@ -186,7 +186,7 @@ export default function AwardsAndPressPage() {
 
             {/* Awards Table */}
             <div className="flex flex-col font-[family-name:League_Spartan]">
-              <div className="hidden md:grid grid-cols-12 gap-4 pb-3 text-[10px] tracking-[0.2em] uppercase text-[#222]/50 border-b border-black/15">
+              <div className="hidden lg:grid grid-cols-12 gap-4 pb-3 text-[10px] tracking-[0.2em] uppercase text-[#222]/50 border-b border-black/15">
                 <span className="col-span-1">Year</span>
                 <span className="col-span-5">Award &amp; Honor</span>
                 <span className="col-span-3">Conferring Organization</span>
@@ -196,12 +196,12 @@ export default function AwardsAndPressPage() {
               {awardsList.map((award, i) => (
                 <div
                   key={i}
-                  className="group py-6 border-b border-black/10 grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-4 items-baseline transition-colors duration-300 hover:bg-black/[0.02]"
+                  className="group py-6 border-b border-black/10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-6 gap-y-2 lg:gap-4 items-baseline transition-colors duration-300 hover:bg-black/[0.02]"
                 >
-                  <div className="col-span-1 font-[family-name:Glacial_Indifference] text-xl md:text-2xl font-light text-[#222]">
+                  <div className="sm:col-span-2 lg:col-span-1 font-[family-name:Glacial_Indifference] text-xl md:text-2xl font-light text-[#222]">
                     {award.year}
                   </div>
-                  <div className="col-span-5">
+                  <div className="sm:col-span-2 lg:col-span-5">
                     <span className="font-[family-name:Glacial_Indifference] text-2xl md:text-3xl font-light uppercase text-[#111] group-hover:translate-x-1 transition-transform inline-block">
                       {award.title}
                     </span>
@@ -209,10 +209,10 @@ export default function AwardsAndPressPage() {
                       {award.category} · {award.badge}
                     </span>
                   </div>
-                  <div className="col-span-3 text-sm text-[#222]/80 font-light">
+                  <div className="lg:col-span-3 text-sm text-[#222]/80 font-light">
                     {award.body}
                   </div>
-                  <div className="col-span-3 md:text-right text-sm font-medium uppercase tracking-wider text-[#111]">
+                  <div className="lg:col-span-3 sm:text-right text-sm font-medium uppercase tracking-wider text-[#111]">
                     {award.project}
                   </div>
                 </div>
@@ -223,7 +223,7 @@ export default function AwardsAndPressPage() {
 
         {/* ---------------- Media & Press Kit Inquiries ---------------- */}
         <section className="px-6 sm:px-12 md:px-16 lg:px-24 py-20 md:py-28 max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-white border border-black/10 text-[#222] p-8 sm:p-12 md:p-16 shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center bg-white border border-black/10 text-[#222] p-6 sm:p-12 md:p-16 shadow-sm">
             <div className="lg:col-span-8">
               <span className="block text-[11px] font-[family-name:League_Spartan] tracking-[0.25em] uppercase text-[#222]/50 mb-3">
                 Editorial Inquiries
@@ -241,7 +241,7 @@ export default function AwardsAndPressPage() {
                 >
                   admin@studioiad.com
                 </a>
-                <span>·</span>
+                <span className="hidden sm:inline">·</span>
                 <a
                   href="tel:+919828618643"
                   className="text-[#111] hover:text-[#555] transition-colors"
@@ -278,20 +278,21 @@ export default function AwardsAndPressPage() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-[#f7f7f7] text-[#222] max-w-[700px] w-full p-8 md:p-12 max-h-[90vh] overflow-y-auto relative"
+              data-lenis-prevent
+              className="bg-[#f7f7f7] text-[#222] max-w-[700px] w-full p-6 sm:p-8 md:p-12 max-h-[90svh] overflow-y-auto overscroll-contain relative"
             >
               <button
                 onClick={() => setSelectedArticle(null)}
-                className="absolute top-6 right-6 cursor-pointer font-[family-name:League_Spartan] text-xs uppercase tracking-widest text-[#222]/60 hover:text-black"
+                className="absolute top-3 right-3 sm:top-5 sm:right-5 p-3 cursor-pointer font-[family-name:League_Spartan] text-xs uppercase tracking-widest text-[#222]/60 hover:text-black"
               >
                 Close ✕
               </button>
 
-              <span className="block text-[11px] font-[family-name:League_Spartan] tracking-[0.25em] uppercase text-[#222]/50 mb-2">
+              <span className="block pr-20 text-[11px] font-[family-name:League_Spartan] tracking-[0.25em] uppercase text-[#222]/50 mb-2">
                 {selectedArticle.name} · {selectedArticle.date}
               </span>
 
-              <h3 className="font-[family-name:Glacial_Indifference] text-3xl sm:text-4xl font-light uppercase leading-[1] text-[#111] mb-6">
+              <h3 className="font-[family-name:Glacial_Indifference] text-2xl min-[400px]:text-3xl sm:text-4xl font-light uppercase leading-[1] text-[#111] mb-6">
                 {selectedArticle.headline}
               </h3>
 

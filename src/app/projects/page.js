@@ -64,12 +64,12 @@ export default function ProjectsPage() {
         {/* ---------------- Hero Section ---------------- */}
         <section className="relative pt-36 md:pt-48 pb-16 md:pb-24 px-6 sm:px-12 md:px-16 lg:px-24 border-b border-black/10 bg-[#f7f7f7] text-[#222]">
           <div className="max-w-[1400px] mx-auto">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-8">
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-8">
               <div>
                 <span className="block font-normal text-[11px] md:text-[12px] font-[family-name:League_Spartan] tracking-[0.25em] uppercase text-[#222]/60 mb-4">
                   Archive · 2022–2026
                 </span>
-                <h1 className="font-light text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] tracking-[-0.035em] uppercase font-[family-name:Glacial_Indifference] text-[#111]">
+                <h1 className="font-light text-5xl min-[400px]:text-6xl sm:text-7xl md:text-8xl xl:text-9xl leading-[0.9] tracking-[-0.035em] uppercase font-[family-name:Glacial_Indifference] text-[#111]">
                   Projects
                 </h1>
               </div>
@@ -181,12 +181,12 @@ export default function ProjectsPage() {
                       {/* Project Info Block */}
                       <div className="pt-6 flex flex-col flex-grow justify-between">
                         <div>
-                          <div className="flex items-center justify-between text-[11px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-[#222]/55 mb-2.5">
-                            <span>{project.loc}</span>
-                            <span>{project.year}</span>
+                          <div className="flex items-center justify-between gap-4 text-[11px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-[#222]/55 mb-2.5">
+                            <span className="truncate">{project.loc}</span>
+                            <span className="shrink-0">{project.year}</span>
                           </div>
 
-                          <h2 className="font-[family-name:Glacial_Indifference] text-3xl sm:text-4xl lg:text-[2.6rem] font-light uppercase leading-[0.98] tracking-[-0.03em] text-[#111] mb-3 group-hover:translate-x-1.5 transition-transform duration-500">
+                          <h2 className="break-words font-[family-name:Glacial_Indifference] text-3xl sm:text-4xl md:text-3xl lg:text-[2.6rem] font-light uppercase leading-[0.98] tracking-[-0.03em] text-[#111] mb-3 group-hover:translate-x-1.5 transition-transform duration-500">
                             {project.title}
                           </h2>
 
@@ -196,8 +196,8 @@ export default function ProjectsPage() {
                         </div>
 
                         <div className="pt-4 border-t border-black/10 flex items-center justify-between gap-4 mt-auto">
-                          <div className="flex items-center gap-3 text-[10px] sm:text-[11px] font-[family-name:League_Spartan] tracking-[0.16em] uppercase text-[#222]/65 truncate">
-                            <span>{project.area}</span>
+                          <div className="flex min-w-0 items-center gap-3 text-[10px] sm:text-[11px] font-[family-name:League_Spartan] tracking-[0.16em] uppercase text-[#222]/65 truncate">
+                            <span className="shrink-0">{project.area}</span>
                             <span className="text-black/25">·</span>
                             <span className="truncate">{project.typology}</span>
                           </div>

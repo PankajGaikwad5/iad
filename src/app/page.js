@@ -427,7 +427,7 @@ export default function Home() {
             <span data-fade className="lab block font-normal text-[12px] leading-[1.4] font-[family-name:League_Spartan] tracking-[0.18em] uppercase text-[#222]">Studio Ia.D</span>
             <Lines
               lines={['Ar.','Ishan', 'Ahluwalia']}
-              className="d font-light text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-[-0.035em] uppercase font-[family-name:Glacial_Indifference] mt-6 mb-8"
+              className="d font-light text-5xl md:text-7xl lg:text-[6vw] 2xl:text-8xl leading-[0.9] tracking-[-0.035em] uppercase font-[family-name:Glacial_Indifference] mt-6 mb-8"
             />
             <div data-fade className="sub text-[16px] text-[#222] font-[family-name:League_Spartan] mb-8 font-medium">Founder &amp; principal architect</div>
             <p data-fade className="max-w-[30em] mb-6 text-base md:text-lg tracking-wide text-[#222]/80 font-light font-[family-name:League_Spartan]">Ishan established Studio Ia.D in 2019, bringing architecture, interiors and landscape into one practice. He leads the design direction of the studio and works closely with clients and the team from concept to completion.</p>
@@ -438,7 +438,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <ImageWrapper id="fph" src={SRC.founder} label="Ishan Ahluwalia, founder of Studio Ia.D" className="!relative !inset-auto aspect-[4/5]" />
+          <ImageWrapper id="fph" src={SRC.founder} label="Ishan Ahluwalia, founder of Studio Ia.D" className="!relative !inset-auto aspect-[4/5] w-full max-w-[560px] mx-auto lg:max-w-none" />
         </section>
 
         {/* ---------------- Studio ---------------- */}

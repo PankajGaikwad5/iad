@@ -113,11 +113,11 @@ export default function ServicesSection() {
               </AnimatePresence>
 
               {/* Discipline Pill & Reference Tag */}
-              <div className="absolute top-4 left-4 z-10 bg-black/60 backdrop-blur-md px-3.5 py-1.5 text-[9px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-white">
+              <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 bg-black/60 backdrop-blur-md px-3.5 py-1.5 text-[9px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-white">
                 {activeService.num} / {activeService.title}
               </div>
 
-              <div className="absolute bottom-4 right-4 z-10 bg-white/90 backdrop-blur-md px-3.5 py-1.5 text-[10px] font-[family-name:League_Spartan] tracking-[0.18em] uppercase text-[#111] border border-black/10">
+              <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-10 max-w-[calc(100%-1.5rem)] truncate bg-white/90 backdrop-blur-md px-3 sm:px-3.5 py-1.5 text-[9px] sm:text-[10px] font-[family-name:League_Spartan] tracking-[0.18em] uppercase text-[#111] border border-black/10">
                 {activeService.projectRef}
               </div>
             </div>
@@ -159,7 +159,7 @@ export default function ServicesSection() {
                 >
                   {/* Top Bar: Index, Title, Arrow */}
                   <div className="flex items-baseline justify-between gap-4">
-                    <div className="flex items-baseline gap-4 sm:gap-6">
+                    <div className="flex min-w-0 items-baseline gap-4 sm:gap-6">
                       <span
                         className={`text-xs sm:text-sm font-mono tracking-widest transition-colors duration-300 ${
                           isSelected ? 'text-[#111] font-semibold' : 'text-[#222]/35 group-hover:text-[#111]'
@@ -200,8 +200,8 @@ export default function ServicesSection() {
                   <div
                     className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                       isSelected
-                        ? 'max-h-[300px] opacity-100 mt-4 sm:mt-5'
-                        : 'max-h-0 sm:group-hover:max-h-[300px] opacity-0 sm:group-hover:opacity-100 sm:group-hover:mt-4'
+                        ? 'max-h-[500px] opacity-100 mt-4 sm:mt-5'
+                        : 'max-h-0 sm:group-hover:max-h-[500px] opacity-0 sm:group-hover:opacity-100 sm:group-hover:mt-4'
                     }`}
                   >
                     <p className="text-[11px] sm:text-[12px] font-[family-name:League_Spartan] tracking-[0.18em] uppercase text-[#111]/70 mb-2 font-medium">

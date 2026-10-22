@@ -41,10 +41,10 @@ export default function Footer() {
     if (!el || typeof window === 'undefined') return;
 
     const ctx = gsap.context(() => {
-      gsap.from(el.querySelectorAll('.big span'), {
-        yPercent: 110,
+      gsap.from(el.querySelector('.big img'), {
+        yPercent: 60,
+        opacity: 0,
         duration: 1.4,
-        stagger: 0.05,
         ease: 'expo.out',
         scrollTrigger: {
           trigger: el.querySelector('.big'),
@@ -64,7 +64,7 @@ export default function Footer() {
       className="border-t border-black/10 px-6 sm:px-12 md:px-16 lg:px-24 pt-20 md:pt-28 pb-8 bg-[#f7f7f7] text-[#222]"
     >
       {/* Footer Navigation */}
-      <nav className="fn flex gap-8 md:gap-16 flex-wrap font-normal text-[13px] font-[family-name:League_Spartan] tracking-[0.18em] uppercase mb-16 md:mb-24" aria-label="Footer">
+      <nav className="fn flex justify-center gap-x-8 gap-y-4 md:gap-x-16 flex-wrap font-normal text-[13px] font-[family-name:League_Spartan] tracking-[0.18em] uppercase mb-16 md:mb-24" aria-label="Footer">
         <Link href="/" className={`cursor-pointer ${UNDERLINE}`}>Home</Link>
         <Link href="/projects" className={`cursor-pointer ${UNDERLINE}`}>Projects</Link>
         <Link href="/team" className={`cursor-pointer ${UNDERLINE}`}>Team</Link>
@@ -72,23 +72,19 @@ export default function Footer() {
         <Link href="/awards-and-press" className={`cursor-pointer ${UNDERLINE}`}>Awards &amp; press</Link>
       </nav>
 
-      {/* Monumental Wordmark */}
+      {/* Centered Logo */}
       <Link
         href="/"
         onClick={handleStudioClick}
         aria-label="Studio Ia.D"
-        className="big flex items-baseline justify-between w-full max-w-full font-light text-[clamp(2.2rem,6.8vw,8rem)] leading-none font-[family-name:Glacial_Indifference] tracking-normal uppercase select-none pb-2 pt-2 cursor-pointer no-underline text-[#222] transition-opacity duration-300 hover:opacity-75 focus-visible:outline focus-visible:outline-1 focus-visible:outline-black"
+        className="big flex justify-center w-fit mx-auto overflow-hidden py-4 md:py-6 cursor-pointer no-underline focus-visible:outline focus-visible:outline-1 focus-visible:outline-black"
       >
-        <div className="flex justify-between w-[57%] overflow-hidden py-1">
-          {['S', 'T', 'U', 'D', 'I', 'O'].map((char, i) => (
-            <span key={i} aria-hidden="true" className="inline-block transform-gpu will-change-transform">{char}</span>
-          ))}
-        </div>
-        <div className="flex justify-between w-[31%] overflow-hidden py-1">
-          {['I', 'A', '.', 'D'].map((char, i) => (
-            <span key={i} aria-hidden="true" className="inline-block transform-gpu will-change-transform">{char}</span>
-          ))}
-        </div>
+        <img
+          src="/logo.png"
+          alt="Studio Ia.D"
+          draggable={false}
+          className="h-[clamp(5rem,14vw,11rem)] w-auto object-contain select-none transform-gpu will-change-transform"
+        />
       </Link>
 
       {/* Info Columns */}
@@ -132,7 +128,7 @@ export default function Footer() {
       </div>
 
       {/* Base Bar */}
-      <div className="base flex flex-wrap items-center justify-between gap-y-3 text-[13px] text-[#222]/80 font-[family-name:League_Spartan] tracking-wide border-t border-black/10 pt-6">
+      <div className="base flex flex-wrap items-center justify-between gap-x-6 gap-y-3 text-[13px] text-[#222]/80 font-[family-name:League_Spartan] tracking-wide border-t border-black/10 pt-6">
         <span>
           © 2026{' '}
           <Link
