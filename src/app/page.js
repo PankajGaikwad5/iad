@@ -273,7 +273,7 @@ export default function Home() {
       <main id="top">
         {/* ---------------- Hero ---------------- */}
         {USE_FRAME_HERO ? <HeroFrameLight /> : (
-        <section className="hero relative h-[100svh] min-h-[620px] overflow-hidden bg-[#111] select-none" aria-roledescription="carousel" aria-label="Featured projects">
+        <section className="hero group/hero relative h-[100svh] min-h-[620px] overflow-hidden bg-[#111] select-none" aria-roledescription="carousel" aria-label="Featured projects">
 
           {/* Filmstrip */}
           <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
@@ -289,7 +289,18 @@ export default function Home() {
                     src={proj.image}
                     alt={proj.title}
                     draggable={false}
-                    className="w-full h-full object-cover contrast-105 pointer-events-none"
+                    className="w-full h-full object-cover pointer-events-none"
+                    style={{ filter: 'grayscale(1) contrast(1.12) brightness(1.06)' }}
+                    initial={{ scale: reduceMotion ? 1 : 1.12 }}
+                    animate={{ scale: idx === activeSlide || reduceMotion ? 1 : 1.12 }}
+                    transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}
+                  />
+                  <motion.img
+                    src={proj.image}
+                    alt=""
+                    aria-hidden="true"
+                    draggable={false}
+                    className="absolute inset-0 w-full h-full object-cover contrast-105 pointer-events-none opacity-0 transition-opacity duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover/hero:opacity-100"
                     initial={{ scale: reduceMotion ? 1 : 1.12 }}
                     animate={{ scale: idx === activeSlide || reduceMotion ? 1 : 1.12 }}
                     transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}

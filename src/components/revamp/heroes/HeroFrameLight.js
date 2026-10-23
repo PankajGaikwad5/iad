@@ -200,8 +200,19 @@ export default function HeroFrameLight({ pinnedFrame = false }) {
 
   // DEFAULT: Full-bleed hero that visitors see right away, fitting the full window size without cutting key architectural features
   return (
-    <section ref={sectionRef} className="relative h-[100svh] min-h-[480px] w-full overflow-hidden bg-[#111] text-white select-none">
+    <section ref={sectionRef} className="hx-hero relative h-[100svh] min-h-[480px] w-full overflow-hidden bg-[#111] text-white select-none">
       <HeroStyles />
+      <style>{`
+        .hx-hero-color {
+          opacity: 0;
+          transition: opacity 1200ms ${SMOOTH};
+          will-change: opacity;
+        }
+        .hx-hero:hover .hx-hero-color,
+        .hx-hero:focus-within .hx-hero-color {
+          opacity: 1;
+        }
+      `}</style>
 
       {/* Full-window image container */}
       <div ref={imageTrackRef} className="absolute inset-0 will-change-transform">
@@ -213,16 +224,28 @@ export default function HeroFrameLight({ pinnedFrame = false }) {
             style={layerStyle(i)}
           >
             <div
-              className="h-full w-full will-change-transform"
+              className="relative h-full w-full will-change-transform"
               style={{
                 ...zoomStyle(i === index),
                 transformOrigin: POSITIONS[s.id] || 'center center',
               }}
             >
+              {/* Black and white base image */}
               <img
                 src={src(s.image)}
                 alt={s.title}
-                className="h-full w-full object-cover contrast-[1.03]"
+                className="h-full w-full object-cover"
+                style={{
+                  objectPosition: POSITIONS[s.id] || 'center center',
+                  filter: MONO_BRIGHT,
+                }}
+              />
+              {/* Color layer displayed on hover */}
+              <img
+                src={src(s.image)}
+                alt=""
+                aria-hidden="true"
+                className="hx-hero-color pointer-events-none absolute inset-0 h-full w-full object-cover contrast-[1.03]"
                 style={{
                   objectPosition: POSITIONS[s.id] || 'center center',
                 }}

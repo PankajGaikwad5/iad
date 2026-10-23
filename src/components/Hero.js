@@ -90,19 +90,33 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-[#1a1a1a]">
+    <section className="group/hero relative w-full h-screen overflow-hidden bg-[#1a1a1a]">
       {/* Pre-render all background images and crossfade them via CSS */}
       {slides.map((s, idx) => (
         <div 
           key={s.id}
-          className="absolute inset-0 bg-cover bg-center pointer-events-none"
+          className="absolute inset-0 pointer-events-none"
           style={{ 
-            backgroundImage: `url(${s.image})`,
             opacity: currentSlide === idx + 1 ? 1 : 0,
             transition: 'opacity 1.2s ease-in-out',
             zIndex: currentSlide === idx + 1 ? 1 : 0
           }}
         >
+          {/* Black and white base image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${s.image})`,
+              filter: 'grayscale(1) contrast(1.12) brightness(1.06)',
+            }}
+          />
+          {/* Color layer on hover */}
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-0 group-hover/hero:opacity-100 transition-opacity duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
+            style={{
+              backgroundImage: `url(${s.image})`,
+            }}
+          />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
       ))}

@@ -144,7 +144,7 @@ export default function Hero() {
         </div>
 
         {/* Right: Rounded image */}
-        <div className="relative w-full md:w-[55%] h-[45vh] md:h-full p-2 md:p-4">
+        <div className="relative group/hero w-full md:w-[55%] h-[45vh] md:h-full p-2 md:p-4">
           <div
             ref={imageRef}
             className="w-full h-full overflow-hidden"
@@ -156,14 +156,30 @@ export default function Hero() {
             {slides.map((s, idx) => (
               <div
                 key={s.id}
-                className="absolute inset-0 bg-cover bg-center transition-opacity duration-700"
+                className="absolute inset-0 transition-opacity duration-700"
                 style={{
-                  backgroundImage: `url(${s.image})`,
                   opacity: current === idx ? 1 : 0,
                   borderRadius: 'var(--radius)',
                 }}
               >
-                <div className="absolute inset-0 bg-black/10" style={{ borderRadius: 'var(--radius)' }} />
+                {/* Black and white base image */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${s.image})`,
+                    filter: 'grayscale(1) contrast(1.12) brightness(1.06)',
+                    borderRadius: 'var(--radius)',
+                  }}
+                />
+                {/* Color layer revealed on hover */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center opacity-0 group-hover/hero:opacity-100 transition-opacity duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  style={{
+                    backgroundImage: `url(${s.image})`,
+                    borderRadius: 'var(--radius)',
+                  }}
+                />
+                <div className="absolute inset-0 bg-black/10 pointer-events-none" style={{ borderRadius: 'var(--radius)' }} />
               </div>
             ))}
           </div>

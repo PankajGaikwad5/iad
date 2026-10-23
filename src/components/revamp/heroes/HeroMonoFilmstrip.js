@@ -8,12 +8,12 @@ export default function HeroMonoFilmstrip() {
   const slide = SLIDES[index];
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-black text-white">
+    <section className="group/hero relative h-screen w-full overflow-hidden bg-black text-white">
       <HeroStyles />
 
       {SLIDES.map((s, i) => (
         <div key={s.id} ref={(el) => (refs.current[i] = el)} className="absolute inset-0" style={layerStyle(i)}>
-          <img src={src(s.image)} alt={s.title} className="h-full w-full object-cover" style={{ filter: MONO }} />
+          <img src={src(s.image)} alt={s.title} className="h-full w-full object-cover transition-[filter] duration-1000 ease-out group-hover/hero:filter-none" style={{ filter: MONO }} />
         </div>
       ))}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[3] h-3/4" style={{ background: 'linear-gradient(to top, #000 0%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0) 100%)' }} />
@@ -36,7 +36,7 @@ export default function HeroMonoFilmstrip() {
               <img
                 src={src(s.image)}
                 alt=""
-                className="h-full w-full object-cover transition-all duration-500 group-hover:scale-105"
+                className="h-full w-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:!opacity-100 group-hover:filter-none"
                 style={{ filter: MONO, opacity: i === index ? 1 : 0.4 }}
               />
               <span className="absolute left-2 top-1.5 text-[10px] tabular-nums text-white">{pad(i + 1)}</span>
