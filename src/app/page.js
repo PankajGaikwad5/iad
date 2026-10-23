@@ -306,8 +306,7 @@ export default function Home() {
                     transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}
                   />
                   {/* Overlay strictly above image only */}
-                  <div className="absolute inset-0 bg-black/30 pointer-events-none" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/60 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 pointer-events-none" />
                   <div className="absolute inset-0 opacity-[0.22] mix-blend-overlay pointer-events-none" style={{ filter: 'url(#grain)' }} />
                 </div>
               ))}
