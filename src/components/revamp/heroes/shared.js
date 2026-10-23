@@ -20,8 +20,8 @@ export const SLIDE_MS = 6000;
 
 export const MONO = 'grayscale(1) contrast(1.3) brightness(0.85)';
 
-// Brighter, clean B&W that keeps the photo luminous instead of muddy
-export const MONO_BRIGHT = 'grayscale(1) brightness(1.15) contrast(1.02)';
+// Brighter B&W that keeps the photo luminous instead of muddy
+export const MONO_BRIGHT = 'grayscale(1) contrast(1.12) brightness(1.06)';
 
 // Slow zoom on the active slide; resets once the slide is hidden
 export const zoomStyle = (active) => ({

@@ -290,7 +290,7 @@ export default function Home() {
                     alt={proj.title}
                     draggable={false}
                     className="w-full h-full object-cover pointer-events-none"
-                    style={{ filter: 'grayscale(1) brightness(1.15) contrast(1.02)' }}
+                    style={{ filter: 'grayscale(1) contrast(1.12) brightness(1.06)' }}
                     initial={{ scale: reduceMotion ? 1 : 1.12 }}
                     animate={{ scale: idx === activeSlide || reduceMotion ? 1 : 1.12 }}
                     transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}
@@ -305,8 +305,8 @@ export default function Home() {
                     animate={{ scale: idx === activeSlide || reduceMotion ? 1 : 1.12 }}
                     transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}
                   />
-                  {/* Faint overlay strictly for text contrast without darkening the photo */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
+                  {/* Overlay strictly above image only */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 pointer-events-none" />
                   <div className="absolute inset-0 opacity-[0.22] mix-blend-overlay pointer-events-none" style={{ filter: 'url(#grain)' }} />
                 </div>
               ))}
