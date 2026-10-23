@@ -104,15 +104,16 @@ export function ProgressBars({ count, index, go, ms = SLIDE_MS, color = '#fff', 
   );
 }
 
-export function Arrows({ prev, next, color = '#fff', border = 'rgba(255,255,255,0.35)' }) {
-  const btn = 'flex h-11 w-11 items-center justify-center rounded-full border bg-transparent cursor-pointer transition-colors duration-300 hover:bg-white/10';
+export function Arrows({ prev, next, color = '#fff', border = 'none' }) {
+  const isNone = border === 'none' || border === 'transparent' || !border;
+  const btn = `flex h-9 w-9 items-center justify-center bg-transparent cursor-pointer transition-opacity duration-300 hover:opacity-60 ${isNone ? 'border-none' : 'rounded-full border hover:bg-white/10'}`;
   return (
-    <div className="flex items-center gap-2">
-      <button onClick={prev} aria-label="Previous slide" className={btn} style={{ borderColor: border, color }}>
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" strokeWidth="1.5" /></svg>
+    <div className="flex items-center gap-1">
+      <button onClick={prev} aria-label="Previous slide" className={btn} style={{ borderColor: isNone ? 'transparent' : border, color }}>
+        <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" strokeWidth="1.5" /></svg>
       </button>
-      <button onClick={next} aria-label="Next slide" className={btn} style={{ borderColor: border, color }}>
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M5 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" /></svg>
+      <button onClick={next} aria-label="Next slide" className={btn} style={{ borderColor: isNone ? 'transparent' : border, color }}>
+        <svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M5 2l5 5-5 5" stroke="currentColor" strokeWidth="1.5" /></svg>
       </button>
     </div>
   );
