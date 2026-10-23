@@ -256,8 +256,8 @@ export default function HeroFrameLight({ pinnedFrame = false }) {
       </div>
 
       {/* Atmospheric overlays for contrast and readability */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-20 bg-gradient-to-b from-black/30 to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-44 md:h-36 bg-gradient-to-t from-black/50 via-black/15 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-32 bg-gradient-to-b from-black/60 via-black/20 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-64 md:h-48 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
 
       {/* Scroll-driven subtle darkening scrim */}
       <div ref={scrollOverlayRef} className="pointer-events-none absolute inset-0 z-[3] bg-black opacity-0" />
@@ -302,7 +302,7 @@ export default function HeroFrameLight({ pinnedFrame = false }) {
             >
               View project
             </a>
-            <Arrows prev={prev} next={next} color="#ffffff" border="none" />
+            <Arrows prev={prev} next={next} color="#ffffff" border="rgba(255,255,255,0.35)" />
           </div>
         </div>
       </div>
