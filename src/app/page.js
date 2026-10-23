@@ -305,9 +305,8 @@ export default function Home() {
                     animate={{ scale: idx === activeSlide || reduceMotion ? 1 : 1.12 }}
                     transition={{ duration: 2.4, ease: [0.22, 1, 0.36, 1] }}
                   />
-                  {/* Proper blackish overlays strictly above image for crystal-clear contrast */}
-                  <div className="absolute inset-0 bg-black/35 pointer-events-none" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 via-black/20 to-black/70 pointer-events-none" />
+                  {/* Overlay strictly above image only */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/35 pointer-events-none" />
                   <div className="absolute inset-0 opacity-[0.22] mix-blend-overlay pointer-events-none" style={{ filter: 'url(#grain)' }} />
                 </div>
               ))}
