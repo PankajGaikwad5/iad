@@ -255,9 +255,15 @@ export default function HeroFrameLight({ pinnedFrame = false }) {
         ))}
       </div>
 
-      {/* Atmospheric overlays for contrast and readability */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-32 bg-gradient-to-b from-black/60 via-black/20 to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-64 md:h-48 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+      {/* Atmospheric blackish overlays for contrast and readability */}
+      {/* Overall blackish tint across the image */}
+      <div className="pointer-events-none absolute inset-0 z-[2] bg-black/35" />
+      {/* Deep bottom gradient for headline, project link, and arrows */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-[65%] bg-gradient-to-t from-black/95 via-black/65 via-black/25 to-transparent" />
+      {/* Top gradient for navbar and header clarity */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-[2] h-44 bg-gradient-to-b from-black/80 via-black/40 to-transparent" />
+      {/* Right side gradient for vertical counter buttons */}
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-[2] w-36 bg-gradient-to-l from-black/45 to-transparent" />
 
       {/* Scroll-driven subtle darkening scrim */}
       <div ref={scrollOverlayRef} className="pointer-events-none absolute inset-0 z-[3] bg-black opacity-0" />
@@ -268,29 +274,30 @@ export default function HeroFrameLight({ pinnedFrame = false }) {
         style={{ filter: 'url(#grain)' }}
       />
 
-      {/* UI layer: original typography formatting with View Project link above arrow buttons */}
+      {/* UI layer: typography and controls with strong legibility */}
       <div ref={uiRef} className="pointer-events-none absolute inset-0 z-10 text-white">
         {/* Vertical counter on the right edge */}
-        <div className="pointer-events-auto absolute right-6 top-1/2 z-20 hidden -translate-y-1/2 flex-col items-center gap-3 md:flex lg:right-10">
+        <div className="pointer-events-auto absolute right-6 top-1/2 z-20 hidden -translate-y-1/2 flex-col items-center gap-3 rounded-full bg-black/40 backdrop-blur-md px-2 py-3 border border-white/10 md:flex lg:right-10">
           {SLIDES.map((s, i) => (
             <button
               key={s.id}
               onClick={() => go(i)}
               aria-label={`Go to ${s.title}`}
+              title={s.title}
               className="cursor-pointer rounded-full border-none p-0 transition-all duration-500 focus-visible:outline-none"
-              style={{ width: 3, height: i === index ? 28 : 3, background: 'currentColor', opacity: i === index ? 1 : 0.3 }}
+              style={{ width: 3, height: i === index ? 28 : 3, background: 'currentColor', opacity: i === index ? 1 : 0.4 }}
             />
           ))}
         </div>
 
         <div className="pointer-events-auto absolute inset-x-6 bottom-[max(1.5rem,env(safe-area-inset-bottom))] z-20 flex items-end justify-between gap-4 sm:inset-x-12 sm:gap-6 md:inset-x-16 md:bottom-8 lg:inset-x-24">
           <div className="flex min-w-0 flex-col items-start">
-            <h1 key={index} className="overflow-hidden break-words font-[family-name:Glacial_Indifference] text-[1.75rem] font-light uppercase leading-[0.9] tracking-[-0.035em] min-[400px]:text-4xl md:text-6xl xl:text-7xl">
+            <h1 key={index} className="overflow-hidden break-words font-[family-name:Glacial_Indifference] text-[1.75rem] font-light uppercase leading-[0.9] tracking-[-0.035em] min-[400px]:text-4xl md:text-6xl xl:text-7xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
               <span className="hx-rise" style={{ animationDelay: '200ms' }}>{slide.title}</span>
             </h1>
             <div className="mt-3 md:mt-4">
-              <span className="font-[family-name:League_Spartan] text-[11px] md:text-[12px] tabular-nums tracking-[0.2em] text-white/70">
-                {pad(index + 1)} <span className="opacity-40">/ {pad(SLIDES.length)}</span>
+              <span className="font-[family-name:League_Spartan] text-[11px] md:text-[12px] tabular-nums tracking-[0.2em] text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
+                {pad(index + 1)} <span className="opacity-50">/ {pad(SLIDES.length)}</span>
               </span>
             </div>
           </div>
@@ -298,11 +305,13 @@ export default function HeroFrameLight({ pinnedFrame = false }) {
           <div className="flex shrink-0 flex-col items-end gap-3 md:gap-4">
             <a
               href={slide.link}
-              className="text-[11px] md:text-[12px] font-[family-name:League_Spartan] tracking-[0.18em] font-normal uppercase pb-1 text-white border-b border-white/40 hover:border-white transition-colors duration-300 focus-visible:outline-none"
+              className="text-[11px] md:text-[12px] font-[family-name:League_Spartan] tracking-[0.18em] font-normal uppercase pb-1 text-white border-b border-white/60 hover:border-white transition-colors duration-300 focus-visible:outline-none drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]"
             >
               View project
             </a>
-            <Arrows prev={prev} next={next} color="#ffffff" border="rgba(255,255,255,0.35)" />
+            <div className="rounded-full bg-black/40 backdrop-blur-md p-1 border border-white/20">
+              <Arrows prev={prev} next={next} color="#ffffff" border="rgba(255,255,255,0.4)" />
+            </div>
           </div>
         </div>
       </div>
