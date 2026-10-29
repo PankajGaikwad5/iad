@@ -16,14 +16,19 @@ export const projects = [
     "area": "12,000 sq. ft.",
     "scope": "Architecture, Turnkey & Landscape",
     "typology": "Private Family Estate",
-    "heroImage": "/hero images/PRIVATE ESTATE.png",
+    "heroImage": "/projects/kothi-bhopal/01.jpg",
     "images": [
-      "/hero images/PRIVATE ESTATE.png",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=2000"
+      "/projects/kothi-bhopal/01.jpg",
+      "/projects/kothi-bhopal/02.jpg",
+      "/projects/kothi-bhopal/03.jpg",
+      "/projects/kothi-bhopal/04.jpg",
+      "/projects/kothi-bhopal/05.jpg",
+      "/projects/kothi-bhopal/06.jpg",
+      "/projects/kothi-bhopal/07.jpg",
+      "/projects/kothi-bhopal/08.jpg",
+      "/projects/kothi-bhopal/09.jpg",
+      "/projects/kothi-bhopal/10.jpg",
+      "/projects/kothi-bhopal/11.jpg"
     ],
     "tagline": "Reimagining classic central Indian haveli courtyards through contemporary monumental geometry.",
     "description": [
@@ -54,14 +59,9 @@ export const projects = [
     "area": "9,200 sq. ft.",
     "scope": "Architecture, Turnkey & Landscape",
     "typology": "Private Luxury Residence",
-    "heroImage": "/hero images/PRIVATE RESIDENCE.png",
+    "heroImage": "/projects/rajputs-residence/01.jpg",
     "images": [
-      "/hero images/PRIVATE RESIDENCE.png",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000"
+      "/projects/rajputs-residence/01.jpg"
     ],
     "tagline": "A sculptural dialogue between cast concrete, deep cantilevers, and meditative daylight in Bhopal.",
     "description": [
@@ -90,14 +90,9 @@ export const projects = [
     "area": "6,500 sq. ft.",
     "scope": "Architecture & Turnkey Execution",
     "typology": "Courtyard Residence",
-    "heroImage": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2400",
+    "heroImage": "/projects/shukrana/01.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=2000"
+      "/projects/shukrana/01.jpg"
     ],
     "tagline": "An introverted family haven built around sunlit green atriums and tranquil water courts.",
     "description": [
@@ -126,14 +121,16 @@ export const projects = [
     "area": "8,800 sq. ft.",
     "scope": "Architecture & Interior Design",
     "typology": "Lakeview Villa",
-    "heroImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "/projects/jahan/01.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000"
+      "/projects/jahan/01.jpg",
+      "/projects/jahan/02.jpg",
+      "/projects/jahan/03.jpg",
+      "/projects/jahan/04.jpg",
+      "/projects/jahan/05.jpg",
+      "/projects/jahan/06.jpg",
+      "/projects/jahan/07.jpg",
+      "/projects/jahan/08.jpg"
     ],
     "tagline": "Panoramic views over Bhopal's Upper Lake framed by floating concrete slabs and floor-to-ceiling glass.",
     "description": [
@@ -162,14 +159,9 @@ export const projects = [
     "area": "7,400 sq. ft.",
     "scope": "Architecture & Bespoke Millwork",
     "typology": "Private Residence",
-    "heroImage": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "/projects/balwani-residence/01.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=2000"
+      "/projects/balwani-residence/01.jpg"
     ],
     "tagline": "Tactile warmth, precision joinery, and private garden vistas defining contemporary family living.",
     "description": [
@@ -198,14 +190,9 @@ export const projects = [
     "area": "5,800 sq. ft.",
     "scope": "Architecture & Interiors",
     "typology": "Contemporary Urban House",
-    "heroImage": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "/projects/archit-jains-residence/01.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=2000"
+      "/projects/archit-jains-residence/01.jpg"
     ],
     "tagline": "Crisp geometry and spatial lightness navigating a compact hillside topography.",
     "description": [
@@ -234,14 +221,9 @@ export const projects = [
     "area": "7,900 sq. ft.",
     "scope": "Turnkey Architecture & Landscape",
     "typology": "Private Luxury Residence",
-    "heroImage": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "/projects/daswanis-residence/01.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=2000"
+      "/projects/daswanis-residence/01.jpg"
     ],
     "tagline": "Monumental stone facades shielding layered, light-filled family sanctuaries.",
     "description": [
@@ -270,14 +252,9 @@ export const projects = [
     "area": "6,200 sq. ft.",
     "scope": "Architecture & Interior Design",
     "typology": "Brutalist Villa",
-    "heroImage": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "/projects/mittal-residence/01.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=2000"
+      "/projects/mittal-residence/01.jpg"
     ],
     "tagline": "Board-formed concrete meets warm teakwood in a balanced expression of architectural honesty.",
     "description": [
@@ -306,14 +283,9 @@ export const projects = [
     "area": "8,100 sq. ft.",
     "scope": "Architecture, Turnkey & Interiors",
     "typology": "Contemporary Haveli",
-    "heroImage": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "/projects/chaudhary-residence/01.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000"
+      "/projects/chaudhary-residence/01.jpg"
     ],
     "tagline": "Traditional central courtyard living revitalized through contemporary spatial proportions.",
     "description": [
@@ -342,14 +314,9 @@ export const projects = [
     "area": "5,200 sq. ft.",
     "scope": "Interior Architecture & Bespoke Millwork",
     "typology": "Urban Penthouse Residence",
-    "heroImage": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "/projects/house-of-light/01.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000"
+      "/projects/house-of-light/01.jpg"
     ],
     "tagline": "An exploration of luminous spatial textures, warm lime plaster, and whispered luxury.",
     "description": [
@@ -378,14 +345,10 @@ export const projects = [
     "area": "6,900 sq. ft.",
     "scope": "Architecture & Landscape",
     "typology": "Minimalist Residence",
-    "heroImage": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "/projects/faisal-khan-residence/01.jpg",
     "images": [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=2000"
+      "/projects/faisal-khan-residence/01.jpg",
+      "/projects/faisal-khan-residence/02.jpg"
     ],
     "tagline": "Serene lines, contemplative gardens, and pure architectural form on the slopes of Koh-e-Fiza.",
     "description": [
@@ -505,6 +468,68 @@ export const projects = [
       "principal": "Ar. Ishan Ahluwalia",
       "team": "Studio Ia.D",
       "status": "Completed (2024)"
+    }
+  },
+  {
+    "id": 38,
+    "slug": "patidar-residence",
+    "aliases": [],
+    "title": "Patidar Residence",
+    "projectName": "Mr. Vijay Patidar's Residence",
+    "category": "Private Residences",
+    "categories": [
+      "Private Residences"
+    ],
+    "loc": "Bhopal",
+    "year": "2025",
+    "area": "3,200 sq. ft.",
+    "scope": "Architecture & Facade Design",
+    "typology": "Contemporary Urban House",
+    "heroImage": "/projects/patidar-residence/01.jpg",
+    "images": [
+      "/projects/patidar-residence/01.jpg"
+    ],
+    "tagline": "Soft-cornered volumes, warm timber, and a lattice-screened stair on a compact urban plot.",
+    "description": [
+      "The Patidar Residence makes the most of a narrow street frontage by stacking its living floors into a composition of rounded, cantilevered frames.",
+      "A full-height timber lattice wraps the stair core, filtering daylight by day and glowing like a lantern at night, while a deep recessed balcony shades the upper living room.",
+      "Textured lime-plaster surfaces, horizontal wood cladding, and planted edges give the compact home a calm, tactile presence on the street."
+    ],
+    "details": {
+      "principal": "Ar. Ishan Ahluwalia",
+      "team": "Studio Ia.D",
+      "status": "In Progress"
+    }
+  },
+  {
+    "id": 39,
+    "slug": "aswani-residence",
+    "aliases": [],
+    "title": "Aswani Residence",
+    "projectName": "Mr. Vishal Aswani's Residence",
+    "category": "Private Residences",
+    "categories": [
+      "Private Residences"
+    ],
+    "loc": "Bhopal",
+    "year": "2025",
+    "area": "4,500 sq. ft.",
+    "scope": "Architecture & Facade Design",
+    "typology": "Neoclassical Urban Residence",
+    "heroImage": "/projects/aswani-residence/01.jpg",
+    "images": [
+      "/projects/aswani-residence/01.jpg"
+    ],
+    "tagline": "A refined neoclassical facade of moulded stone, fluted pilasters, and cascading planters.",
+    "description": [
+      "The Aswani Residence presents a composed, classically proportioned face to the street, softened by layers of greenery at every level.",
+      "Ivory stone mouldings and a fluted corner pilaster frame black-steel glazing, while a slatted metal screen on the upper floor provides privacy to a planted terrace.",
+      "Lantern sconces and concealed lighting bring warmth to the facade after dusk, completing a home that feels both stately and welcoming."
+    ],
+    "details": {
+      "principal": "Ar. Ishan Ahluwalia",
+      "team": "Studio Ia.D",
+      "status": "In Progress"
     }
   },
   {
