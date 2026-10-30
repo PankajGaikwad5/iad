@@ -6,18 +6,17 @@ import gsap from 'gsap';
 import { useLenis } from 'lenis/react';
 import { teamPhotos } from '@/data/team';
 
-const DEFAULT_PREVIEWS = [
-  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
-  "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2000",
-  "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000",
-  "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000"
+// Placeholder previews per link — swap for final images. Team uses team photos instead.
+const LINKS = [
+  { title: 'Home', href: '/', image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000" },
+  { title: 'Projects', href: '/projects', image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2000" },
+  { title: 'Team', href: '/team', team: true },
+  { title: 'Awards & press', href: '/awards-and-press', image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000" }
 ];
 
-const LINKS = [
-  { title: 'Home', href: '/' },
-  { title: 'Projects', href: '/projects' },
-  { title: 'Team', href: '/team', team: true },
-  { title: 'Awards & press', href: '/awards-and-press' }
+const PREVIEWS = [
+  ...LINKS.flatMap((l, i) => (l.team ? [] : [{ key: i, src: l.image }])),
+  ...teamPhotos.map((m, i) => ({ key: `team-${i}`, src: m.image }))
 ];
 
 const EASE = 'ease-[cubic-bezier(0.22,1,0.36,1)]';
@@ -78,7 +77,7 @@ const motionScale = () =>
 // `keepVisibleFor`: viewport heights of scroll during which the header never hides (e.g. a pinned hero)
 // `transparentFor`: viewport heights of scroll during which the header stays transparent (over a pinned hero);
 // past `lightTextFrom` viewport heights inside that zone it switches to white text and logo.
-export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = false, keepVisibleFor = 0, transparentFor = 0, lightTextFrom = null }) {
+export default function Navbar({ darkText = false, keepVisibleFor = 0, transparentFor = 0, lightTextFrom = null }) {
   const router = useRouter();
   const pathname = usePathname();
   const lenis = useLenis();
@@ -510,11 +509,11 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
           data-preview
           className="relative hidden aspect-[3/4] w-[min(28vw,400px)] self-center justify-self-end md:block"
         >
-          {[...previewImages, ...teamPhotos.map((m) => m.image)].map((src, i) => {
-            const on = activeImg === 'team' ? i === previewImages.length + teamPick : activeImg === i;
+          {PREVIEWS.map(({ key, src }) => {
+            const on = activeImg === 'team' ? key === `team-${teamPick}` : activeImg === key;
             return (
             <div
-              key={i}
+              key={key}
               className={`absolute inset-0 overflow-hidden bg-[#c9c9c9] transition-opacity duration-700 ${
                 on ? 'opacity-100' : 'opacity-0'
               }`}
@@ -535,7 +534,7 @@ export default function Navbar({ previewImages = DEFAULT_PREVIEWS, darkText = fa
           <span className="pointer-events-none absolute bottom-3 left-4 font-[family-name:League_Spartan] text-[10px] uppercase tracking-[0.2em] text-white/90">
             {activeImg === 'team'
               ? teamPhotos[teamPick].name
-              : `${String(activeImg + 1).padStart(2, '0')} / ${String(previewImages.length).padStart(2, '0')}`}
+              : `${String(activeImg + 1).padStart(2, '0')} / ${String(LINKS.length).padStart(2, '0')}`}
           </span>
         </div>
 

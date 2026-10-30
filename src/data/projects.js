@@ -44,12 +44,10 @@ export const projects = [
   },
   {
     "id": 2,
-    "slug": "rajputs-residence",
-    "aliases": [
-      "the-modern-villa"
-    ],
-    "title": "Rajput's Residence",
-    "projectName": "Rajput's Residence",
+    "slug": "rajput-residence",
+    "aliases": ["rajputs-residence", "the-modern-villa"],
+    "title": "Rajput Residence",
+    "projectName": "Rajput Residence",
     "category": "Private Residences",
     "categories": [
       "Private Residences"
@@ -65,7 +63,7 @@ export const projects = [
     ],
     "tagline": "A sculptural dialogue between cast concrete, deep cantilevers, and meditative daylight in Bhopal.",
     "description": [
-      "Situated in the tranquil environs of Chunabhatti in Bhopal, Rajput's Residence is organized around a progression of open-plan living pavilions, framed water courts, and expansive landscaped terraces.",
+      "Situated in the tranquil environs of Chunabhatti in Bhopal, Rajput Residence is organized around a progression of open-plan living pavilions, framed water courts, and expansive landscaped terraces.",
       "The design deliberately avoids extraneous ornament, relying instead on the raw honesty of board-formed concrete, bush-hammered limestone, and black powder-coated steel glazing systems. Deep overhangs protect the interior volumes from the intense sun while drawing ambient, softened daylight into the heart of the home.",
       "Executed under Studio Ia.D's integrated turnkey methodology, every nuance—from bespoke millwork and recessed architectural illumination to custom travertine washbasins—was detailed and realized in-house."
     ],
@@ -146,10 +144,10 @@ export const projects = [
   },
   {
     "id": 5,
-    "slug": "balwani-residence",
-    "aliases": [],
-    "title": "Balwani Residence",
-    "projectName": "Balwani Residence",
+    "slug": "mr-rajesh-balwanis-residence",
+    "aliases": ["balwani-residence"],
+    "title": "Mr. Rajesh Balwani's Residence",
+    "projectName": "Mr. Rajesh Balwani's Residence",
     "category": "Private Residences",
     "categories": [
       "Private Residences"
@@ -165,7 +163,7 @@ export const projects = [
     ],
     "tagline": "Tactile warmth, precision joinery, and private garden vistas defining contemporary family living.",
     "description": [
-      "Designed for an extended family in Gulmohar, the Balwani Residence reconciles modern communal spaces with serene individual retreats.",
+      "Designed for an extended family in Gulmohar, Mr. Rajesh Balwani's Residence reconciles modern communal spaces with serene individual retreats.",
       "Custom-designed walnut cabinetry, brass shadow reveals, and natural linen wall claddings create an acoustic softness throughout the interior.",
       "Landscaped pocket courtyards ensure every bedroom and living space looks out directly onto lush indigenous foliage."
     ],
@@ -177,10 +175,10 @@ export const projects = [
   },
   {
     "id": 6,
-    "slug": "archit-jains-residence",
-    "aliases": [],
-    "title": "Archit Jain's Residence",
-    "projectName": "Archit Jain's Residence",
+    "slug": "mr-archit-jains-residence",
+    "aliases": ["archit-jains-residence"],
+    "title": "Mr. Archit Jain's Residence",
+    "projectName": "Mr. Archit Jain's Residence",
     "category": "Private Residences",
     "categories": [
       "Private Residences"
@@ -208,10 +206,10 @@ export const projects = [
   },
   {
     "id": 7,
-    "slug": "daswanis-residence",
-    "aliases": [],
-    "title": "Daswani's Residence",
-    "projectName": "Daswani's Residence",
+    "slug": "daswani-residence",
+    "aliases": ["daswanis-residence"],
+    "title": "Daswani Residence",
+    "projectName": "Daswani Residence",
     "category": "Private Residences",
     "categories": [
       "Private Residences"
@@ -227,7 +225,7 @@ export const projects = [
     ],
     "tagline": "Monumental stone facades shielding layered, light-filled family sanctuaries.",
     "description": [
-      "Daswani's Residence presents a monolithic, dignified exterior to the street, opening up internally into expansive double-height family lounges.",
+      "Daswani Residence presents a monolithic, dignified exterior to the street, opening up internally into expansive double-height family lounges.",
       "Studio Ia.D provided complete turnkey execution, delivering custom architectural hardware, integrated mood illumination, and bespoke furniture pieces crafted specifically for each chamber.",
       "The rear garden features a sunken fire-pit lounge flanked by weeping bamboo and a serene reflecting basin."
     ],
@@ -239,10 +237,10 @@ export const projects = [
   },
   {
     "id": 8,
-    "slug": "mittal-residence",
-    "aliases": [],
-    "title": "Mittal Residence",
-    "projectName": "Mittal Residence",
+    "slug": "mittals-residence",
+    "aliases": ["mittal-residence"],
+    "title": "Mittal's Residence",
+    "projectName": "Mittal's Residence",
     "category": "Private Residences",
     "categories": [
       "Private Residences"
@@ -258,7 +256,7 @@ export const projects = [
     ],
     "tagline": "Board-formed concrete meets warm teakwood in a balanced expression of architectural honesty.",
     "description": [
-      "The Mittal Residence celebrates the expressive qualities of raw cast concrete, contrasting it with warm natural timbers and delicate sheer drapery.",
+      "Mittal's Residence celebrates the expressive qualities of raw cast concrete, contrasting it with warm natural timbers and delicate sheer drapery.",
       "Deeply recessed window portals shield the interior from solar gain while framing curated vignettes of the landscaped grounds.",
       "A cantilevered steel staircase rises through the double-height foyer like a floating sculpture."
     ],
@@ -270,10 +268,10 @@ export const projects = [
   },
   {
     "id": 9,
-    "slug": "chaudhary-residence",
-    "aliases": [],
-    "title": "Chaudhary Residence",
-    "projectName": "Chaudhary Residence",
+    "slug": "mjr-choudharys-residence",
+    "aliases": ["chaudhary-residence"],
+    "title": "Mjr. Choudhary's Residence",
+    "projectName": "Mjr. Choudhary's Residence",
     "category": "Private Residences",
     "categories": [
       "Private Residences"
@@ -289,7 +287,7 @@ export const projects = [
     ],
     "tagline": "Traditional central courtyard living revitalized through contemporary spatial proportions.",
     "description": [
-      "Commissioned by a multi-generational family, the Chaudhary Residence centers around a colonnaded courtyard that breathes fresh air into every surrounding salon.",
+      "Commissioned by a multi-generational family, Mjr. Choudhary's Residence centers around a colonnaded courtyard that breathes fresh air into every surrounding salon.",
       "Custom brass screens temper the sunlight, casting dynamic geometric shadows that animate the polished stone floors throughout the day.",
       "Studio Ia.D coordinated all structural, MEP, and artisanal stone carving works under a single turnkey umbrella."
     ],
@@ -332,10 +330,10 @@ export const projects = [
   },
   {
     "id": 11,
-    "slug": "faisal-khan-residence",
-    "aliases": [],
-    "title": "Faisal Khan Residence",
-    "projectName": "Faisal Khan Residence",
+    "slug": "mr-khan",
+    "aliases": ["faisal-khan-residence"],
+    "title": "Mr. Khan",
+    "projectName": "Mr. Khan",
     "category": "Private Residences",
     "categories": [
       "Private Residences"
@@ -352,7 +350,7 @@ export const projects = [
     ],
     "tagline": "Serene lines, contemplative gardens, and pure architectural form on the slopes of Koh-e-Fiza.",
     "description": [
-      "The Faisal Khan Residence embraces pure architectural minimalism, creating spaces of contemplative silence.",
+      "Mr. Khan's residence embraces pure architectural minimalism, creating spaces of contemplative silence.",
       "Expansive floor-to-ceiling glass sliding portals connect the living quarters with an enclosed courtyard anchored by a solitary mature frangipani tree.",
       "Every detail has been rigorously pared back to celebrate the interplay of natural light, shadow, and architectural silence."
     ],
@@ -364,10 +362,10 @@ export const projects = [
   },
   {
     "id": 12,
-    "slug": "not-so-smart-house",
-    "aliases": [],
-    "title": "Not So Smart House",
-    "projectName": "Not So Smart House",
+    "slug": "not-so-small-house",
+    "aliases": ["not-so-smart-house"],
+    "title": "Not So Small House",
+    "projectName": "Not So Small House",
     "category": "Private Residences",
     "categories": [
       "Private Residences"
@@ -377,18 +375,12 @@ export const projects = [
     "area": "5,400 sq. ft.",
     "scope": "Architecture & Passive Climate Design",
     "typology": "Passive Solar Residence",
-    "heroImage": "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "A home prioritizing intuitive thermal mass, natural shade, and vernacular intelligence over high-tech complexity.",
     "description": [
-      "A deliberate critique of over-automated smart homes, 'Not So Smart House' relies on passive climate intelligence: cavity brick walls, thermal chimneys, and deeply recessed verandas.",
+      "'Not So Small House' relies on passive climate intelligence over high-tech complexity: cavity brick walls, thermal chimneys, and deeply recessed verandas.",
       "Natural earth pigments and hand-cast terrazzo tiles give the interiors an earthy, grounded quality that ages gracefully over time.",
       "The home remains cool in the peak of summer and pleasantly warm in winter with minimal artificial climate control."
     ],
@@ -399,82 +391,10 @@ export const projects = [
     }
   },
   {
-    "id": 13,
-    "slug": "bharat-choudary-residence",
-    "aliases": [],
-    "title": "Bharat Choudary Residence",
-    "projectName": "Bharat Choudary Residence",
-    "category": "Private Residences",
-    "categories": [
-      "Private Residences"
-    ],
-    "loc": "Gulmohar, Bhopal",
-    "year": "2023",
-    "area": "7,600 sq. ft.",
-    "scope": "Architecture & Interiors",
-    "typology": "Private Luxury Residence",
-    "heroImage": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=2000",
-    "images": [
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=2000"
-    ],
-    "tagline": "Bold cantilevers and floating planes creating effortless indoor-outdoor connectivity.",
-    "description": [
-      "The Bharat Choudary Residence is organized as two interlocked volumetric pavilions flanking a central reflecting pool.",
-      "Deep overhangs shield the extensive glass facades from direct southern radiation while bathing the living rooms in soft reflected daylight.",
-      "Artisanal woodwork and tailored lighting scenarios provide warmth and sophistication across all family living areas."
-    ],
-    "details": {
-      "principal": "Ar. Ishan Ahluwalia",
-      "team": "Studio Ia.D",
-      "status": "Completed (2023)"
-    }
-  },
-  {
-    "id": 14,
-    "slug": "rajdeep-ji-residence",
-    "aliases": [],
-    "title": "Rajdeep ji residence",
-    "projectName": "Rajdeep ji residence",
-    "category": "Private Residences",
-    "categories": [
-      "Private Residences"
-    ],
-    "loc": "Bawadiya Kalan, Bhopal",
-    "year": "2024",
-    "area": "8,400 sq. ft.",
-    "scope": "Architecture, Turnkey & Landscape",
-    "typology": "Estate Residence",
-    "heroImage": "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=2000",
-    "images": [
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2000"
-    ],
-    "tagline": "Stately proportions, private courtyards, and timeless craftsmanship in Bawadiya Kalan.",
-    "description": [
-      "Designed as a tranquil sanctuary, the Rajdeep Residence balances classical balance with contemporary crispness.",
-      "The layout arranges formal guest salons and intimate family spaces around a cascading garden court.",
-      "Turnkey execution by Studio Ia.D encompassed bespoke stonework, custom architectural doors, and integrated atmospheric lighting."
-    ],
-    "details": {
-      "principal": "Ar. Ishan Ahluwalia",
-      "team": "Studio Ia.D",
-      "status": "Completed (2024)"
-    }
-  },
-  {
     "id": 38,
-    "slug": "patidar-residence",
-    "aliases": [],
-    "title": "Patidar Residence",
+    "slug": "mr-vijay-patidars-residence",
+    "aliases": ["patidar-residence"],
+    "title": "Mr. Vijay Patidar's Residence",
     "projectName": "Mr. Vijay Patidar's Residence",
     "category": "Private Residences",
     "categories": [
@@ -491,7 +411,7 @@ export const projects = [
     ],
     "tagline": "Soft-cornered volumes, warm timber, and a lattice-screened stair on a compact urban plot.",
     "description": [
-      "The Patidar Residence makes the most of a narrow street frontage by stacking its living floors into a composition of rounded, cantilevered frames.",
+      "Mr. Vijay Patidar's Residence makes the most of a narrow street frontage by stacking its living floors into a composition of rounded, cantilevered frames.",
       "A full-height timber lattice wraps the stair core, filtering daylight by day and glowing like a lantern at night, while a deep recessed balcony shades the upper living room.",
       "Textured lime-plaster surfaces, horizontal wood cladding, and planted edges give the compact home a calm, tactile presence on the street."
     ],
@@ -503,9 +423,9 @@ export const projects = [
   },
   {
     "id": 39,
-    "slug": "aswani-residence",
-    "aliases": [],
-    "title": "Aswani Residence",
+    "slug": "mr-vishal-aswanis-residence",
+    "aliases": ["aswani-residence"],
+    "title": "Mr. Vishal Aswani's Residence",
     "projectName": "Mr. Vishal Aswani's Residence",
     "category": "Private Residences",
     "categories": [
@@ -522,7 +442,7 @@ export const projects = [
     ],
     "tagline": "A refined neoclassical facade of moulded stone, fluted pilasters, and cascading planters.",
     "description": [
-      "The Aswani Residence presents a composed, classically proportioned face to the street, softened by layers of greenery at every level.",
+      "Mr. Vishal Aswani's Residence presents a composed, classically proportioned face to the street, softened by layers of greenery at every level.",
       "Ivory stone mouldings and a fluted corner pilaster frame black-steel glazing, while a slatted metal screen on the upper floor provides privacy to a planted terrace.",
       "Lantern sconces and concealed lighting bring warmth to the facade after dusk, completing a home that feels both stately and welcoming."
     ],
@@ -551,12 +471,7 @@ export const projects = [
     "typology": "Boutique Heritage Hotel",
     "heroImage": "/hero images/HOSPITALITY.png",
     "images": [
-      "/hero images/HOSPITALITY.png",
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000"
+      "/hero images/HOSPITALITY.png"
     ],
     "tagline": "A refined urban sanctuary blending timeless central Indian hospitality with contemporary architectural grace.",
     "description": [
@@ -585,14 +500,8 @@ export const projects = [
     "area": "38,000 sq. ft.",
     "scope": "Architecture & Interior Architecture",
     "typology": "Business & Leisure Hotel",
-    "heroImage": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Subtle luxury and fluid spatial choreography tailored for modern travelers.",
     "description": [
@@ -621,14 +530,8 @@ export const projects = [
     "area": "28,000 sq. ft.",
     "scope": "Architecture, Turnkey & Landscape",
     "typology": "Highway Resort & Suites",
-    "heroImage": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2400"
     ],
     "tagline": "A serene travel retreat defined by landscaped garden verandas and vernacular cooling pavilions.",
     "description": [
@@ -657,14 +560,8 @@ export const projects = [
     "area": "3,800 sq. ft.",
     "scope": "Adaptive Reuse & Interior Architecture",
     "typology": "Artisan Bistro & Social Space",
-    "heroImage": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "An intimate culinary sanctuary marrying exposed historic brickwork with warm brass accents.",
     "description": [
@@ -693,14 +590,8 @@ export const projects = [
     "area": "5,200 sq. ft.",
     "scope": "Architecture & Open-Air Dining Design",
     "typology": "Courtyard Café & Eatery",
-    "heroImage": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Open-air dining woven between mature shade trees and cascading water walls in Gulmohar.",
     "description": [
@@ -729,14 +620,8 @@ export const projects = [
     "area": "14,000 sq. ft.",
     "scope": "Landscape & Farm-to-Table Restaurant",
     "typology": "Destination Dining Pavilion",
-    "heroImage": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Rustic timber trusses and sweeping forest vistas defining destination farm-to-table dining.",
     "description": [
@@ -769,12 +654,7 @@ export const projects = [
     "typology": "Creative Studio & Corporate Office",
     "heroImage": "/hero images/OFFICE & WORK SPACE.png",
     "images": [
-      "/hero images/OFFICE & WORK SPACE.png",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2400"
+      "/hero images/OFFICE & WORK SPACE.png"
     ],
     "tagline": "A physical manifesto of Studio Ia.D's spatial ethos: concrete honesty, light, and collaborative clarity.",
     "description": [
@@ -803,14 +683,8 @@ export const projects = [
     "area": "8,200 sq. ft.",
     "scope": "Retail Architecture & Experience Design",
     "typology": "Luxury Bridal & Couture Emporium",
-    "heroImage": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Monumental arches and warm champagne illumination framing haute couture in MP Nagar.",
     "description": [
@@ -839,14 +713,8 @@ export const projects = [
     "area": "4,800 sq. ft.",
     "scope": "Interior Architecture & Acoustic Detailing",
     "typology": "Executive Corporate Headquarters",
-    "heroImage": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Clean lines, acoustically mastered boardrooms, and timeless white oak millwork.",
     "description": [
@@ -875,14 +743,8 @@ export const projects = [
     "area": "9,500 sq. ft.",
     "scope": "Multi-Level Retail Architecture",
     "typology": "Flagship Retail Store",
-    "heroImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2400",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "A vibrant multi-storey retail destination built for high footfall and effortless wayfinding.",
     "description": [
@@ -911,14 +773,8 @@ export const projects = [
     "area": "11,000 sq. ft.",
     "scope": "Showroom Architecture & Material Galleries",
     "typology": "Bespoke Furniture Showroom",
-    "heroImage": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Curated residential vignettes that let bespoke furniture and fine materials speak for themselves.",
     "description": [
@@ -947,14 +803,8 @@ export const projects = [
     "area": "3,200 sq. ft.",
     "scope": "Interior Design & Bespoke Illumination",
     "typology": "Designer Fashion Studio",
-    "heroImage": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Intimate salon architecture celebrating bespoke fashion and personalized consultation.",
     "description": [
@@ -983,14 +833,8 @@ export const projects = [
     "area": "4,500 sq. ft.",
     "scope": "Adaptive Reuse & Heritage Retail Space",
     "typology": "Handloom & Craft Gallery",
-    "heroImage": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Honoring traditional Indian handloom heritage through warm terracotta, cane, and teakwood details.",
     "description": [
@@ -1023,12 +867,7 @@ export const projects = [
     "typology": "Gated Villa Community",
     "heroImage": "/hero images/RESIDENTIAL DEVELOPMENT.png",
     "images": [
-      "/hero images/RESIDENTIAL DEVELOPMENT.png",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000"
+      "/hero images/RESIDENTIAL DEVELOPMENT.png"
     ],
     "tagline": "A masterplanned enclave of signature villas organized around central landscaped orchards and water swales.",
     "description": [
@@ -1057,14 +896,8 @@ export const projects = [
     "area": "32,000 sq. ft.",
     "scope": "Architecture & Communal Landscape",
     "typology": "Boutique Multi-Family Enclave",
-    "heroImage": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Modern low-rise residential enclave defined by private green terraces and communal garden courtyards.",
     "description": [
@@ -1093,14 +926,8 @@ export const projects = [
     "area": "6.2 Acres",
     "scope": "Masterplanning, Turnkey & Architecture",
     "typology": "Landscape-Integrated Villas",
-    "heroImage": "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Villas nestled within continuous wildflower corridors and native stone swales.",
     "description": [
@@ -1129,14 +956,8 @@ export const projects = [
     "area": "3.8 Acres",
     "scope": "Architecture & Waterfront Landscape",
     "typology": "Luxury Waterfront Residences",
-    "heroImage": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Exclusive shoreline residences capturing the timeless breezes and sunsets of Bhopal's Upper Lake.",
     "description": [
@@ -1165,14 +986,8 @@ export const projects = [
     "area": "5 Acres",
     "scope": "Masterplanning & Residential Architecture",
     "typology": "Private Gated Enclave",
-    "heroImage": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Secure, serene, and modern residential masterplan designed for peaceful community living.",
     "description": [
@@ -1201,14 +1016,8 @@ export const projects = [
     "area": "4,600 sq. ft.",
     "scope": "Interior Architecture & Custom Joinery",
     "typology": "Contemporary Luxury Interior",
-    "heroImage": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Sculptural marble, brushed bronze details, and tailored millwork in Arera Colony.",
     "description": [
@@ -1237,14 +1046,8 @@ export const projects = [
     "area": "5,100 sq. ft.",
     "scope": "Interior Architecture & Art Curation",
     "typology": "Modern Classic Interior",
-    "heroImage": "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Warm earth tones, tactile textured plaster, and handpicked Indian contemporary art.",
     "description": [
@@ -1273,14 +1076,8 @@ export const projects = [
     "area": "4,200 sq. ft.",
     "scope": "Interior Design & Turnkey Millwork",
     "typology": "Warm Minimalist Interior",
-    "heroImage": "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2400",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Understated calm, linen drapery, and honest joinery for everyday domestic peace.",
     "description": [
@@ -1309,14 +1106,8 @@ export const projects = [
     "area": "3,900 sq. ft.",
     "scope": "Interior Renovation & Styling",
     "typology": "Serene Living Sanctuary",
-    "heroImage": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "A revitalized apartment interior filled with soft natural light, warm timber, and plants.",
     "description": [
@@ -1345,14 +1136,8 @@ export const projects = [
     "area": "4,800 sq. ft.",
     "scope": "Full Turnkey Interior Execution",
     "typology": "Bespoke Modern Penthouse",
-    "heroImage": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=2000",
+    "heroImage": "",
     "images": [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=2000"
     ],
     "tagline": "Sophisticated dark palettes, smoked oak, and bespoke brass accents overlooking Koh-e-Fiza.",
     "description": [

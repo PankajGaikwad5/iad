@@ -58,7 +58,7 @@ export default function ProjectsPage() {
         </filter>
       </svg>
 
-      <Navbar previewImages={projects.slice(0, 3).map((p) => p.heroImage)} darkText={true} />
+      <Navbar darkText={true} />
 
       <main id="top">
         {/* ---------------- Hero Section ---------------- */}
@@ -157,11 +157,13 @@ export default function ProjectsPage() {
                     >
                       {/* Image Showcase Container */}
                       <div className="overflow-hidden bg-[#c9c9c9] relative aspect-[16/11] sm:aspect-[4/3] w-full border border-black/10">
+                        {project.heroImage && (
                         <motion.img
                           src={project.heroImage}
                           alt={project.title}
                           className="w-full h-full object-cover contrast-105 transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                         />
+                        )}
                         <div
                           className="absolute inset-0 opacity-[0.22] mix-blend-overlay pointer-events-none"
                           style={{ filter: 'url(#grain)' }}

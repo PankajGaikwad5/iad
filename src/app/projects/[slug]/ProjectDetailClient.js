@@ -14,7 +14,7 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
   const [isExpanded, setIsExpanded] = useState(false);
   const thumbRefs = useRef([]);
 
-  const allImages = project.images && project.images.length > 0 ? project.images : [project.heroImage];
+  const allImages = project.images?.length ? project.images : project.heroImage ? [project.heroImage] : [];
 
   const hasMany = allImages.length > 12;
   const shouldLimit = hasMany && !isExpanded;
@@ -143,7 +143,7 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
         </filter>
       </svg>
 
-      <Navbar previewImages={allImages.slice(0, 3)} darkText={true} />
+      <Navbar darkText={true} />
 
       <main id="top">
         {/* ---------------- Hero Section ---------------- */}
@@ -177,21 +177,25 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
 
             {/* Cinematic Hero Image */}
             <div
-              onClick={() => openLightbox(0)}
-              className="group relative w-full aspect-[16/9] md:aspect-[16/8] overflow-hidden bg-[#c9c9c9] cursor-pointer border border-black/10"
+              onClick={allImages.length ? () => openLightbox(0) : undefined}
+              className={`group relative w-full aspect-[16/9] md:aspect-[16/8] overflow-hidden bg-[#c9c9c9] border border-black/10 ${allImages.length ? 'cursor-pointer' : ''}`}
             >
+              {project.heroImage && (
               <img
                 src={project.heroImage}
                 alt={project.title}
                 className="w-full h-full object-cover contrast-105 transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
               />
+              )}
               <div
                 className="absolute inset-0 opacity-[0.22] mix-blend-overlay pointer-events-none"
                 style={{ filter: 'url(#grain)' }}
               />
+              {allImages.length > 0 && (
               <div className="absolute bottom-4 right-4 bg-white/85 backdrop-blur-sm px-4 py-2 text-[10px] font-[family-name:League_Spartan] tracking-[0.2em] uppercase text-[#111] border border-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 Click to expand (1 / {allImages.length})
               </div>
+              )}
             </div>
           </div>
         </section>
@@ -274,6 +278,7 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
         </section>
 
         {/* ---------------- Project Gallery / Mosaic ---------------- */}
+        {allImages.length > 0 && (
         <section className="px-6 sm:px-12 md:px-16 lg:px-24 pb-20 md:pb-28 max-w-[1400px] mx-auto border-t border-black/10 pt-16">
           <div className="flex items-end justify-between gap-6 mb-10 md:mb-12">
             <div>
@@ -342,6 +347,7 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
             )}
           </div>
         </section>
+        )}
 
         {/* ---------------- Next Project Transition Banner ---------------- */}
         {nextProject && (
@@ -367,11 +373,13 @@ export default function ProjectDetailClient({ project, nextProject, prevProject 
                   </div>
 
                   <div className="w-full sm:max-w-[560px] lg:w-[420px] aspect-[16/10] overflow-hidden bg-[#c9c9c9] border border-black/10 shrink-0">
+                    {nextProject.heroImage && (
                     <img
                       src={nextProject.heroImage}
                       alt={nextProject.title}
                       className="w-full h-full object-cover contrast-105 transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                     />
+                    )}
                   </div>
                 </div>
               </Link>

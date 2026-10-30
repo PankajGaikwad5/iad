@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${project.title} | Studio Ia.D`,
       description: project.tagline,
-      images: [project.heroImage],
+      images: project.heroImage ? [project.heroImage] : [],
     },
   };
 }

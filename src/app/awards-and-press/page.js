@@ -35,7 +35,7 @@ export default function AwardsAndPressPage() {
         </filter>
       </svg>
 
-      <Navbar previewImages={featuredPublications.slice(0, 3).map((p) => p.image)} darkText={true} />
+      <Navbar darkText={true} />
 
       <main id="top">
         {/* ---------------- Hero Section ---------------- */}

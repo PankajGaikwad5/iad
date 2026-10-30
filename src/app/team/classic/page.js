@@ -100,9 +100,7 @@ export default function TeamPage() {
         </filter>
       </svg>
 
-      {/* Navbar with team portraits for hover preview */}
       <Navbar
-        previewImages={teamMembers.map((m) => m.fgImage)}
         darkText={true}
       />
 
