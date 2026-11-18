@@ -16,19 +16,19 @@ export const projects = [
     "area": "12,000 sq. ft.",
     "scope": "Architecture, Turnkey & Landscape",
     "typology": "Private Family Estate",
-    "heroImage": "/projects/kothi-bhopal/01.jpg",
+    "heroImage": "/projects/private-residences/kothi-bhopal/01.jpg",
     "images": [
-      "/projects/kothi-bhopal/01.jpg",
-      "/projects/kothi-bhopal/02.jpg",
-      "/projects/kothi-bhopal/03.jpg",
-      "/projects/kothi-bhopal/04.jpg",
-      "/projects/kothi-bhopal/05.jpg",
-      "/projects/kothi-bhopal/06.jpg",
-      "/projects/kothi-bhopal/07.jpg",
-      "/projects/kothi-bhopal/08.jpg",
-      "/projects/kothi-bhopal/09.jpg",
-      "/projects/kothi-bhopal/10.jpg",
-      "/projects/kothi-bhopal/11.jpg"
+      "/projects/private-residences/kothi-bhopal/01.jpg",
+      "/projects/private-residences/kothi-bhopal/02.jpg",
+      "/projects/private-residences/kothi-bhopal/03.jpg",
+      "/projects/private-residences/kothi-bhopal/04.jpg",
+      "/projects/private-residences/kothi-bhopal/05.jpg",
+      "/projects/private-residences/kothi-bhopal/06.jpg",
+      "/projects/private-residences/kothi-bhopal/07.jpg",
+      "/projects/private-residences/kothi-bhopal/08.jpg",
+      "/projects/private-residences/kothi-bhopal/09.jpg",
+      "/projects/private-residences/kothi-bhopal/10.jpg",
+      "/projects/private-residences/kothi-bhopal/11.jpg"
     ],
     "tagline": "Reimagining classic central Indian haveli courtyards through contemporary monumental geometry.",
     "description": [
@@ -57,9 +57,9 @@ export const projects = [
     "area": "9,200 sq. ft.",
     "scope": "Architecture, Turnkey & Landscape",
     "typology": "Private Luxury Residence",
-    "heroImage": "/projects/rajputs-residence/01.jpg",
+    "heroImage": "/projects/private-residences/rajputs-residence/01.jpg",
     "images": [
-      "/projects/rajputs-residence/01.jpg"
+      "/projects/private-residences/rajputs-residence/01.jpg"
     ],
     "tagline": "A sculptural dialogue between cast concrete, deep cantilevers, and meditative daylight in Bhopal.",
     "description": [
@@ -88,9 +88,9 @@ export const projects = [
     "area": "6,500 sq. ft.",
     "scope": "Architecture & Turnkey Execution",
     "typology": "Courtyard Residence",
-    "heroImage": "/projects/shukrana/01.jpg",
+    "heroImage": "/projects/private-residences/shukrana/01.jpg",
     "images": [
-      "/projects/shukrana/01.jpg"
+      "/projects/private-residences/shukrana/01.jpg"
     ],
     "tagline": "An introverted family haven built around sunlit green atriums and tranquil water courts.",
     "description": [
@@ -119,16 +119,16 @@ export const projects = [
     "area": "8,800 sq. ft.",
     "scope": "Architecture & Interior Design",
     "typology": "Lakeview Villa",
-    "heroImage": "/projects/jahan/01.jpg",
+    "heroImage": "/projects/private-residences/jahan/01.jpg",
     "images": [
-      "/projects/jahan/01.jpg",
-      "/projects/jahan/02.jpg",
-      "/projects/jahan/03.jpg",
-      "/projects/jahan/04.jpg",
-      "/projects/jahan/05.jpg",
-      "/projects/jahan/06.jpg",
-      "/projects/jahan/07.jpg",
-      "/projects/jahan/08.jpg"
+      "/projects/private-residences/jahan/01.jpg",
+      "/projects/private-residences/jahan/02.jpg",
+      "/projects/private-residences/jahan/03.jpg",
+      "/projects/private-residences/jahan/04.jpg",
+      "/projects/private-residences/jahan/05.jpg",
+      "/projects/private-residences/jahan/06.jpg",
+      "/projects/private-residences/jahan/07.jpg",
+      "/projects/private-residences/jahan/08.jpg"
     ],
     "tagline": "Panoramic views over Bhopal's Upper Lake framed by floating concrete slabs and floor-to-ceiling glass.",
     "description": [
@@ -157,9 +157,9 @@ export const projects = [
     "area": "7,400 sq. ft.",
     "scope": "Architecture & Bespoke Millwork",
     "typology": "Private Residence",
-    "heroImage": "/projects/balwani-residence/01.jpg",
+    "heroImage": "/projects/private-residences/balwani-residence/01.jpg",
     "images": [
-      "/projects/balwani-residence/01.jpg"
+      "/projects/private-residences/balwani-residence/01.jpg"
     ],
     "tagline": "Tactile warmth, precision joinery, and private garden vistas defining contemporary family living.",
     "description": [
@@ -188,9 +188,9 @@ export const projects = [
     "area": "5,800 sq. ft.",
     "scope": "Architecture & Interiors",
     "typology": "Contemporary Urban House",
-    "heroImage": "/projects/archit-jains-residence/01.jpg",
+    "heroImage": "/projects/private-residences/archit-jains-residence/01.jpg",
     "images": [
-      "/projects/archit-jains-residence/01.jpg"
+      "/projects/private-residences/archit-jains-residence/01.jpg"
     ],
     "tagline": "Crisp geometry and spatial lightness navigating a compact hillside topography.",
     "description": [
@@ -219,9 +219,9 @@ export const projects = [
     "area": "7,900 sq. ft.",
     "scope": "Turnkey Architecture & Landscape",
     "typology": "Private Luxury Residence",
-    "heroImage": "/projects/daswanis-residence/01.jpg",
+    "heroImage": "/projects/private-residences/daswanis-residence/01.jpg",
     "images": [
-      "/projects/daswanis-residence/01.jpg"
+      "/projects/private-residences/daswanis-residence/01.jpg"
     ],
     "tagline": "Monumental stone facades shielding layered, light-filled family sanctuaries.",
     "description": [
@@ -250,9 +250,9 @@ export const projects = [
     "area": "6,200 sq. ft.",
     "scope": "Architecture & Interior Design",
     "typology": "Brutalist Villa",
-    "heroImage": "/projects/mittal-residence/01.jpg",
+    "heroImage": "/projects/private-residences/mittal-residence/01.jpg",
     "images": [
-      "/projects/mittal-residence/01.jpg"
+      "/projects/private-residences/mittal-residence/01.jpg"
     ],
     "tagline": "Board-formed concrete meets warm teakwood in a balanced expression of architectural honesty.",
     "description": [
@@ -281,9 +281,9 @@ export const projects = [
     "area": "8,100 sq. ft.",
     "scope": "Architecture, Turnkey & Interiors",
     "typology": "Contemporary Haveli",
-    "heroImage": "/projects/chaudhary-residence/01.jpg",
+    "heroImage": "/projects/private-residences/chaudhary-residence/01.jpg",
     "images": [
-      "/projects/chaudhary-residence/01.jpg"
+      "/projects/private-residences/chaudhary-residence/01.jpg"
     ],
     "tagline": "Traditional central courtyard living revitalized through contemporary spatial proportions.",
     "description": [
@@ -312,9 +312,9 @@ export const projects = [
     "area": "5,200 sq. ft.",
     "scope": "Interior Architecture & Bespoke Millwork",
     "typology": "Urban Penthouse Residence",
-    "heroImage": "/projects/house-of-light/01.jpg",
+    "heroImage": "/projects/private-residences/house-of-light/01.jpg",
     "images": [
-      "/projects/house-of-light/01.jpg"
+      "/projects/private-residences/house-of-light/01.jpg"
     ],
     "tagline": "An exploration of luminous spatial textures, warm lime plaster, and whispered luxury.",
     "description": [
@@ -343,10 +343,10 @@ export const projects = [
     "area": "6,900 sq. ft.",
     "scope": "Architecture & Landscape",
     "typology": "Minimalist Residence",
-    "heroImage": "/projects/faisal-khan-residence/01.jpg",
+    "heroImage": "/projects/private-residences/faisal-khan-residence/01.jpg",
     "images": [
-      "/projects/faisal-khan-residence/01.jpg",
-      "/projects/faisal-khan-residence/02.jpg"
+      "/projects/private-residences/faisal-khan-residence/01.jpg",
+      "/projects/private-residences/faisal-khan-residence/02.jpg"
     ],
     "tagline": "Serene lines, contemplative gardens, and pure architectural form on the slopes of Koh-e-Fiza.",
     "description": [
@@ -405,9 +405,9 @@ export const projects = [
     "area": "3,200 sq. ft.",
     "scope": "Architecture & Facade Design",
     "typology": "Contemporary Urban House",
-    "heroImage": "/projects/patidar-residence/01.jpg",
+    "heroImage": "/projects/private-residences/patidar-residence/01.jpg",
     "images": [
-      "/projects/patidar-residence/01.jpg"
+      "/projects/private-residences/patidar-residence/01.jpg"
     ],
     "tagline": "Soft-cornered volumes, warm timber, and a lattice-screened stair on a compact urban plot.",
     "description": [
@@ -436,9 +436,9 @@ export const projects = [
     "area": "4,500 sq. ft.",
     "scope": "Architecture & Facade Design",
     "typology": "Neoclassical Urban Residence",
-    "heroImage": "/projects/aswani-residence/01.jpg",
+    "heroImage": "/projects/private-residences/aswani-residence/01.jpg",
     "images": [
-      "/projects/aswani-residence/01.jpg"
+      "/projects/private-residences/aswani-residence/01.jpg"
     ],
     "tagline": "A refined neoclassical facade of moulded stone, fluted pilasters, and cascading planters.",
     "description": [
@@ -469,9 +469,9 @@ export const projects = [
     "area": "24,000 sq. ft.",
     "scope": "Masterplanning, Architecture & Interiors",
     "typology": "Boutique Heritage Hotel",
-    "heroImage": "/hero images/HOSPITALITY.png",
+    "heroImage": "/projects/hospitality/hotel-tilak/01.webp",
     "images": [
-      "/hero images/HOSPITALITY.png"
+      "/projects/hospitality/hotel-tilak/01.webp"
     ],
     "tagline": "A refined urban sanctuary blending timeless central Indian hospitality with contemporary architectural grace.",
     "description": [
@@ -500,8 +500,9 @@ export const projects = [
     "area": "38,000 sq. ft.",
     "scope": "Architecture & Interior Architecture",
     "typology": "Business & Leisure Hotel",
-    "heroImage": "",
+    "heroImage": "/projects/hospitality/hotel-regenta/01.webp",
     "images": [
+      "/projects/hospitality/hotel-regenta/01.webp"
     ],
     "tagline": "Subtle luxury and fluid spatial choreography tailored for modern travelers.",
     "description": [
@@ -543,6 +544,37 @@ export const projects = [
       "principal": "Ar. Ishan Ahluwalia",
       "team": "Studio Ia.D",
       "status": "Completed (2023)"
+    }
+  },
+  {
+    "id": 40,
+    "slug": "the-apb-inn",
+    "aliases": [],
+    "title": "The APB Inn",
+    "projectName": "The APB Inn",
+    "category": "Hospitality",
+    "categories": [
+      "Hospitality"
+    ],
+    "loc": "Bhopal",
+    "year": "2025",
+    "area": "30,000 sq. ft.",
+    "scope": "Architecture & Facade Design",
+    "typology": "Boutique Hotel",
+    "heroImage": "/projects/hospitality/the-apb-inn/01.webp",
+    "images": [
+      "/projects/hospitality/the-apb-inn/01.webp"
+    ],
+    "tagline": "A European-inspired inn of mansard roofs, arched colonnades, and lantern-lit arrival courts.",
+    "description": [
+      "The APB Inn draws on the character of a classic European country inn, with a steep slate mansard roof, rhythmic dormers, and ivory plastered walls.",
+      "A low arcaded wing with copper-toned awnings shelters the arrival court and parking, leading guests to a double-height glazed entrance.",
+      "Set against a dense backdrop of mature trees, warm facade lighting turns the building into a glowing landmark after dusk."
+    ],
+    "details": {
+      "principal": "Ar. Ishan Ahluwalia",
+      "team": "Studio Ia.D",
+      "status": "In Progress"
     }
   },
   {
@@ -1016,8 +1048,14 @@ export const projects = [
     "area": "4,600 sq. ft.",
     "scope": "Interior Architecture & Custom Joinery",
     "typology": "Contemporary Luxury Interior",
-    "heroImage": "",
+    "heroImage": "/projects/residential-interiors/mirchandani-residence/01.webp",
     "images": [
+      "/projects/residential-interiors/mirchandani-residence/01.webp",
+      "/projects/residential-interiors/mirchandani-residence/02.webp",
+      "/projects/residential-interiors/mirchandani-residence/03.webp",
+      "/projects/residential-interiors/mirchandani-residence/04.webp",
+      "/projects/residential-interiors/mirchandani-residence/05.webp",
+      "/projects/residential-interiors/mirchandani-residence/06.webp"
     ],
     "tagline": "Sculptural marble, brushed bronze details, and tailored millwork in Arera Colony.",
     "description": [
@@ -1046,8 +1084,22 @@ export const projects = [
     "area": "5,100 sq. ft.",
     "scope": "Interior Architecture & Art Curation",
     "typology": "Modern Classic Interior",
-    "heroImage": "",
+    "heroImage": "/projects/residential-interiors/rajman/01.webp",
     "images": [
+      "/projects/residential-interiors/rajman/01.webp",
+      "/projects/residential-interiors/rajman/02.webp",
+      "/projects/residential-interiors/rajman/03.webp",
+      "/projects/residential-interiors/rajman/04.webp",
+      "/projects/residential-interiors/rajman/05.webp",
+      "/projects/residential-interiors/rajman/06.webp",
+      "/projects/residential-interiors/rajman/07.webp",
+      "/projects/residential-interiors/rajman/08.webp",
+      "/projects/residential-interiors/rajman/09.webp",
+      "/projects/residential-interiors/rajman/10.webp",
+      "/projects/residential-interiors/rajman/11.webp",
+      "/projects/residential-interiors/rajman/12.webp",
+      "/projects/residential-interiors/rajman/13.webp",
+      "/projects/residential-interiors/rajman/14.webp"
     ],
     "tagline": "Warm earth tones, tactile textured plaster, and handpicked Indian contemporary art.",
     "description": [
@@ -1106,8 +1158,30 @@ export const projects = [
     "area": "3,900 sq. ft.",
     "scope": "Interior Renovation & Styling",
     "typology": "Serene Living Sanctuary",
-    "heroImage": "",
+    "heroImage": "/projects/residential-interiors/aanandam/01.webp",
     "images": [
+      "/projects/residential-interiors/aanandam/01.webp",
+      "/projects/residential-interiors/aanandam/02.webp",
+      "/projects/residential-interiors/aanandam/03.webp",
+      "/projects/residential-interiors/aanandam/04.webp",
+      "/projects/residential-interiors/aanandam/05.webp",
+      "/projects/residential-interiors/aanandam/06.webp",
+      "/projects/residential-interiors/aanandam/07.webp",
+      "/projects/residential-interiors/aanandam/08.webp",
+      "/projects/residential-interiors/aanandam/09.webp",
+      "/projects/residential-interiors/aanandam/10.webp",
+      "/projects/residential-interiors/aanandam/11.webp",
+      "/projects/residential-interiors/aanandam/12.webp",
+      "/projects/residential-interiors/aanandam/13.webp",
+      "/projects/residential-interiors/aanandam/14.webp",
+      "/projects/residential-interiors/aanandam/15.webp",
+      "/projects/residential-interiors/aanandam/16.webp",
+      "/projects/residential-interiors/aanandam/17.webp",
+      "/projects/residential-interiors/aanandam/18.webp",
+      "/projects/residential-interiors/aanandam/19.webp",
+      "/projects/residential-interiors/aanandam/20.webp",
+      "/projects/residential-interiors/aanandam/21.webp",
+      "/projects/residential-interiors/aanandam/22.webp"
     ],
     "tagline": "A revitalized apartment interior filled with soft natural light, warm timber, and plants.",
     "description": [
@@ -1136,8 +1210,45 @@ export const projects = [
     "area": "4,800 sq. ft.",
     "scope": "Full Turnkey Interior Execution",
     "typology": "Bespoke Modern Penthouse",
-    "heroImage": "",
+    "heroImage": "/projects/residential-interiors/raisinghani-residence/01.webp",
     "images": [
+      "/projects/residential-interiors/raisinghani-residence/01.webp",
+      "/projects/residential-interiors/raisinghani-residence/02.webp",
+      "/projects/residential-interiors/raisinghani-residence/03.webp",
+      "/projects/residential-interiors/raisinghani-residence/04.webp",
+      "/projects/residential-interiors/raisinghani-residence/05.webp",
+      "/projects/residential-interiors/raisinghani-residence/06.webp",
+      "/projects/residential-interiors/raisinghani-residence/07.webp",
+      "/projects/residential-interiors/raisinghani-residence/08.webp",
+      "/projects/residential-interiors/raisinghani-residence/09.webp",
+      "/projects/residential-interiors/raisinghani-residence/10.webp",
+      "/projects/residential-interiors/raisinghani-residence/11.webp",
+      "/projects/residential-interiors/raisinghani-residence/12.webp",
+      "/projects/residential-interiors/raisinghani-residence/13.webp",
+      "/projects/residential-interiors/raisinghani-residence/14.webp",
+      "/projects/residential-interiors/raisinghani-residence/15.webp",
+      "/projects/residential-interiors/raisinghani-residence/16.webp",
+      "/projects/residential-interiors/raisinghani-residence/17.webp",
+      "/projects/residential-interiors/raisinghani-residence/18.webp",
+      "/projects/residential-interiors/raisinghani-residence/19.webp",
+      "/projects/residential-interiors/raisinghani-residence/20.webp",
+      "/projects/residential-interiors/raisinghani-residence/21.webp",
+      "/projects/residential-interiors/raisinghani-residence/22.webp",
+      "/projects/residential-interiors/raisinghani-residence/23.webp",
+      "/projects/residential-interiors/raisinghani-residence/24.webp",
+      "/projects/residential-interiors/raisinghani-residence/25.webp",
+      "/projects/residential-interiors/raisinghani-residence/26.webp",
+      "/projects/residential-interiors/raisinghani-residence/27.webp",
+      "/projects/residential-interiors/raisinghani-residence/28.webp",
+      "/projects/residential-interiors/raisinghani-residence/29.webp",
+      "/projects/residential-interiors/raisinghani-residence/30.webp",
+      "/projects/residential-interiors/raisinghani-residence/31.webp",
+      "/projects/residential-interiors/raisinghani-residence/32.webp",
+      "/projects/residential-interiors/raisinghani-residence/33.webp",
+      "/projects/residential-interiors/raisinghani-residence/34.webp",
+      "/projects/residential-interiors/raisinghani-residence/35.webp",
+      "/projects/residential-interiors/raisinghani-residence/36.webp",
+      "/projects/residential-interiors/raisinghani-residence/37.webp"
     ],
     "tagline": "Sophisticated dark palettes, smoked oak, and bespoke brass accents overlooking Koh-e-Fiza.",
     "description": [

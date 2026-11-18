@@ -4,7 +4,7 @@ import gsap from 'gsap';
 
 export const SLIDES = [
   { id: '01', title: 'Private Residence', location: 'Bhopal, India', category: 'Architecture & Interiors', image: '/hero images/PRIVATE RESIDENCE.png', link: '/projects/the-modern-villa' },
-  { id: '02', title: 'Hospitality', location: 'Ratapani, MP', category: 'Eco-Luxury Sanctuary', image: '/hero images/HOSPITALITY.png', link: '/projects/nature-retreat' },
+  { id: '02', title: 'Hospitality', location: 'Ratapani, MP', category: 'Eco-Luxury Sanctuary', image: '/hero images/HOSPITALITY.png', link: '/projects/hotel-regenta' },
   { id: '03', title: 'Private Estate', location: 'Bhopal, India', category: 'Architecture & Turnkey', image: '/hero images/PRIVATE ESTATE.png', link: '/projects/kothi' },
   { id: '04', title: 'Office & Work Space', location: 'Bhopal, India', category: 'Commercial Architecture', image: '/hero images/OFFICE & WORK SPACE.png', link: '/projects/atelier-19' },
   { id: '05', title: 'Residential Development', location: 'Bhopal, India', category: 'Masterplanning & Architecture', image: '/hero images/RESIDENTIAL DEVELOPMENT.png', link: '/projects/the-courtyard-house' },
